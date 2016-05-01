@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+         http://www.springframework.org/schema/tx 
+         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- 鎵撳紑Spring鐨凙nnotation鏀寔 -->
+	<context:annotation-config />
+	<!-- 璁惧畾Spring 鍘诲摢浜涘寘涓壘Annotation -->
+	<context:component-scan base-package="com.licy" />
+	
+	<!-- <bean id="ftlPath" class="java.lang.String">
+		<constructor-arg value="/ftl"/>
+	</bean>
+	
+	<bean id="outPath" class="java.lang.String">
+		<constructor-arg value="/jsp/template"/>
+	</bean> -->
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!-- 閰嶇疆杩炴帴姹犵殑鍒濆鍊� -->
+		<property name="initialSize" value="1" />
+		<!-- 杩炴帴姹犵殑鏈�澶у�� -->
+		<!-- <property name="maxActive" value="500"/> -->
+		<!-- 鏈�澶х┖闂叉椂锛屽綋缁忚繃涓�涓珮宄颁箣鍚庯紝杩炴帴姹犲彲浠ュ皢涓�浜涚敤涓嶅埌鐨勮繛鎺ラ噴鏀撅紝涓�鐩村噺灏戝埌maxIdle涓烘 -->
+		<!-- <property name="maxIdle" value="2"/> -->
+		<!-- 褰撴渶灏忕┖闂叉椂锛屽綋杩炴帴灏戜簬minIdle鏃朵細鑷姩鍘荤敵璇蜂竴浜涜繛鎺� -->
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="20" />
+		<property name="maxWait" value="1000" />
+	</bean>
+	<!--鍒涘缓Spring鐨凷essionFactory宸ュ巶 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<!-- 
+	鍜宧ibernate4鏁村悎娌℃湁鎻愪緵涓撻棬鐨勯拡瀵笰nnotation鐨勭被锛岀洿鎺ュ湪LocalSessionFactoryBean涓凡缁忛泦鎴�
+ -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 娉ㄥ叆鏁版嵁婧� -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 璁剧疆Spring鍙栭偅涓寘涓煡鎵剧浉搴旂殑瀹炰綋绫� -->
+		<property name="packagesToScan">
+			<value>com.licy.model</value>
+		</property>
+		<property name="hibernateProperties">
+			<!-- <value> hibernate.dialect=org.hibernate.dialect.HSQLDialect </value> -->
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.format_sql">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 閰嶇疆Spring鐨勪簨鍔″鐞� -->
+	<!-- 鍒涘缓浜嬪姟绠＄悊鍣�-->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+<!-- 閰嶇疆AOP锛孲pring鏄�氳繃AOP鏉ヨ繘琛屼簨鍔＄鐞嗙殑 -->
+	<aop:config>
+	<!-- 璁剧疆pointCut琛ㄧず鍝簺鏂规硶瑕佸姞鍏ヤ簨鍔″鐞� -->
+	<!-- 浠ヤ笅鐨勪簨鍔℃槸澹版槑鍦―AO涓紝浣嗘槸閫氬父閮戒細鍦⊿ervice鏉ュ鐞嗗涓笟鍔″璞￠�昏緫鐨勫叧绯伙紝娉ㄥ叆鍒犻櫎锛屾洿鏂扮瓑锛屾鏃跺鏋滃湪鎵ц浜嗕竴涓楠や箣鍚庢姏鍑哄紓甯�
+		灏变細瀵艰嚧鏁版嵁涓嶅畬鏁达紝鎵�浠ヤ簨鍔′笉搴旇鍦―AO灞傚鐞嗭紝鑰屽簲璇ュ湪service锛岃繖涔熷氨鏄疭pring鎵�鎻愪緵鐨勪竴涓潪甯告柟渚跨殑宸ュ叿锛屽０鏄庡紡浜嬪姟 -->
+		<aop:pointcut id="allMethods"
+			expression="execution(* com.licy.service.*.*(..))" />
+		<!-- 閫氳繃advisor鏉ョ‘瀹氬叿浣撹鍔犲叆浜嬪姟鎺у埗鐨勬柟娉� -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods" />
+	</aop:config>
+<!-- 閰嶇疆鍝簺鏂规硶瑕佸姞鍏ヤ簨鍔℃帶鍒� -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+		<!-- 璁╂墍鏈夌殑鏂规硶閮藉姞鍏ヤ簨鍔＄鐞嗭紝涓轰簡鎻愰珮鏁堢巼锛屽彲浠ユ妸涓�浜涙煡璇箣绫荤殑鏂规硶璁剧疆涓哄彧璇荤殑浜嬪姟 -->
+			<tx:method name="*" propagation="REQUIRED" read-only="true"/>
+			<!-- 浠ヤ笅鏂规硶閮芥槸鍙兘璁捐淇敼鐨勬柟娉曪紝灏辨棤娉曡缃负鍙 -->
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<tx:method name="del*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="clear*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+</beans>
