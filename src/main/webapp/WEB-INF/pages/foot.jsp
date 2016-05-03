@@ -14,7 +14,7 @@
         <h4>You can leave a message in below:</h4>
         <form method="post" action="contact-post.html">
           <input type="text" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
-          <textarea onFocus="if(this.value == 'Your Message here....') this.value='';" onBlur="if(this.value == '') this.value='Your Message here....;" >Your Message here....</textarea>
+          <textarea onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....;" >Your Message here....</textarea>
           <span class="pull-right"><input type="submit" value="submit us"></span>
         </form>
       </div>

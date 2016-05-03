@@ -68,7 +68,7 @@
           <a rel="group" title="" href="${pageContext.request.contextPath}/resources/images/pic4.jpg"><img src="${pageContext.request.contextPath}/resources/images/pic4.jpg" alt=""class="img-responsive"/></a>
         </div>
         <h3><a href="single-page.html">Lorem Ipsum available</a></h3>
-        <p class="para">There are many variations of passages of Lorem Ipsum available,</p>
+        <p class="para">There are many variations of passages of Lorem</p>
 
       </div>
       <div class="clear"></div>

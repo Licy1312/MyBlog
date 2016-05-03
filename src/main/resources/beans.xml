@@ -11,18 +11,11 @@
          http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
          http://www.springframework.org/schema/tx 
          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<!-- 鎵撳紑Spring鐨凙nnotation鏀寔 -->
+	<!-- 打开Spring的Annotation支持 -->
 	<context:annotation-config />
-	<!-- 璁惧畾Spring 鍘诲摢浜涘寘涓壘Annotation -->
+	<!-- 设定Spring 去哪些包中找Annotation -->
 	<context:component-scan base-package="com.licy" />
-	
-	<!-- <bean id="ftlPath" class="java.lang.String">
-		<constructor-arg value="/ftl"/>
-	</bean>
-	
-	<bean id="outPath" class="java.lang.String">
-		<constructor-arg value="/jsp/template"/>
-	</bean> -->
+
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
@@ -30,28 +23,26 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		<!-- 閰嶇疆杩炴帴姹犵殑鍒濆鍊� -->
+		<!-- 配置连接池的初始值 -->
 		<property name="initialSize" value="1" />
-		<!-- 杩炴帴姹犵殑鏈�澶у�� -->
+		<!-- 连接池的最大值 -->
 		<!-- <property name="maxActive" value="500"/> -->
-		<!-- 鏈�澶х┖闂叉椂锛屽綋缁忚繃涓�涓珮宄颁箣鍚庯紝杩炴帴姹犲彲浠ュ皢涓�浜涚敤涓嶅埌鐨勮繛鎺ラ噴鏀撅紝涓�鐩村噺灏戝埌maxIdle涓烘 -->
+		<!-- 最大空闲时，当经过一个高峰之后，连接池可以将一些用不到的连接释放，一直减少到maxIdle为止 -->
 		<!-- <property name="maxIdle" value="2"/> -->
-		<!-- 褰撴渶灏忕┖闂叉椂锛屽綋杩炴帴灏戜簬minIdle鏃朵細鑷姩鍘荤敵璇蜂竴浜涜繛鎺� -->
+		<!-- 当最小空闲时，当连接少于minIdle时会自动去申请一些连接 -->
 		<property name="minIdle" value="1" />
 		<property name="maxActive" value="100" />
 		<property name="maxIdle" value="20" />
 		<property name="maxWait" value="1000" />
 	</bean>
-	<!--鍒涘缓Spring鐨凷essionFactory宸ュ巶 -->
+	<!--创建Spring的SessionFactory工厂 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
-	<!-- 
-	鍜宧ibernate4鏁村悎娌℃湁鎻愪緵涓撻棬鐨勯拡瀵笰nnotation鐨勭被锛岀洿鎺ュ湪LocalSessionFactoryBean涓凡缁忛泦鎴�
- -->
+	<!-- 和hibernate4整合没有提供专门的针对Annotation的类，直接在LocalSessionFactoryBean中已经集成-->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<!-- 娉ㄥ叆鏁版嵁婧� -->
+		<!-- 注入数据源 -->
 		<property name="dataSource" ref="dataSource" />
-		<!-- 璁剧疆Spring鍙栭偅涓寘涓煡鎵剧浉搴旂殑瀹炰綋绫� -->
+		<!-- 设置Spring取那个包中查找相应的实体类 -->
 		<property name="packagesToScan">
 			<value>com.licy.model</value>
 		</property>
@@ -66,28 +57,28 @@
 		</property>
 	</bean>
 
-	<!-- 閰嶇疆Spring鐨勪簨鍔″鐞� -->
-	<!-- 鍒涘缓浜嬪姟绠＄悊鍣�-->
+	<!-- 配置Spring的事务处理 -->
+	<!-- 创建事务管理器-->
 	<bean id="txManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-<!-- 閰嶇疆AOP锛孲pring鏄�氳繃AOP鏉ヨ繘琛屼簨鍔＄鐞嗙殑 -->
+	<!-- 配置AOP，Spring是通过AOP来进行事务管理的 -->
 	<aop:config>
-	<!-- 璁剧疆pointCut琛ㄧず鍝簺鏂规硶瑕佸姞鍏ヤ簨鍔″鐞� -->
-	<!-- 浠ヤ笅鐨勪簨鍔℃槸澹版槑鍦―AO涓紝浣嗘槸閫氬父閮戒細鍦⊿ervice鏉ュ鐞嗗涓笟鍔″璞￠�昏緫鐨勫叧绯伙紝娉ㄥ叆鍒犻櫎锛屾洿鏂扮瓑锛屾鏃跺鏋滃湪鎵ц浜嗕竴涓楠や箣鍚庢姏鍑哄紓甯�
-		灏变細瀵艰嚧鏁版嵁涓嶅畬鏁达紝鎵�浠ヤ簨鍔′笉搴旇鍦―AO灞傚鐞嗭紝鑰屽簲璇ュ湪service锛岃繖涔熷氨鏄疭pring鎵�鎻愪緵鐨勪竴涓潪甯告柟渚跨殑宸ュ叿锛屽０鏄庡紡浜嬪姟 -->
+		<!-- 设置pointCut表示哪些方法要加入事务处理 -->
+		<!-- 以下的事务是声明在DAO中，但是通常都会在Service来处理多个业务对象逻辑的关系，注入删除，更新等，此时如果在执行了一个步骤之后抛出异常
+            就会导致数据不完整，所以事务不应该在DAO层处理，而应该在service，这也就是Spring所提供的一个非常方便的工具，声明式事务 -->
 		<aop:pointcut id="allMethods"
 			expression="execution(* com.licy.service.*.*(..))" />
-		<!-- 閫氳繃advisor鏉ョ‘瀹氬叿浣撹鍔犲叆浜嬪姟鎺у埗鐨勬柟娉� -->
+		<!-- 通过advisor来确定具体要加入事务控制的方法 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods" />
 	</aop:config>
-<!-- 閰嶇疆鍝簺鏂规硶瑕佸姞鍏ヤ簨鍔℃帶鍒� -->
+	<!-- 配置哪些方法要加入事务控制 -->
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
-		<!-- 璁╂墍鏈夌殑鏂规硶閮藉姞鍏ヤ簨鍔＄鐞嗭紝涓轰簡鎻愰珮鏁堢巼锛屽彲浠ユ妸涓�浜涙煡璇箣绫荤殑鏂规硶璁剧疆涓哄彧璇荤殑浜嬪姟 -->
+			<!-- 让所有的方法都加入事务管理，为了提高效率，可以把一些查询之类的方法设置为只读的事务 -->
 			<tx:method name="*" propagation="REQUIRED" read-only="true"/>
-			<!-- 浠ヤ笅鏂规硶閮芥槸鍙兘璁捐淇敼鐨勬柟娉曪紝灏辨棤娉曡缃负鍙 -->
+			<!-- 以下方法都是可能设计修改的方法，就无法设置为只读 -->
 			<tx:method name="add*" propagation="REQUIRED"/>
 			<tx:method name="del*" propagation="REQUIRED"/>
 			<tx:method name="update*" propagation="REQUIRED"/>
