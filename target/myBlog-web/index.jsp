@@ -1,5 +1,5 @@
 <html>
 <body>
-<jsp:forward page="/WEB-INF/pages/essays.jsp"></jsp:forward>
+<jsp:forward page="/WEB-INF/pages/home.jsp"></jsp:forward>
 </body>
 </html>

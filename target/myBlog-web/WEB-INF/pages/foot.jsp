@@ -6,16 +6,36 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/javascript">
+  function commit(){
+    $.ajax({
+      cache:false,
+      type:"POST",
+      url:"/saveMessages",
+      data:$('#messageForm').serialize(),
+      async:false,
+      error:function(request){
+        alert("留言失败！");
+      },
+      success:function(){
+        alert("留言成功！")
+      }
+    });
+  }
+</script>
 <div class="footer_bg" id="contact"><!-- start footer -->
   <div class="container">
     <div class="row footer">
       <div class="col-md-8 contact_left">
         <h3>Leave a message</h3>
         <h4>You can leave a message in below:</h4>
-        <form method="post" action="contact-post.html">
-          <input type="text" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
-          <textarea onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....;" >Your Message here....</textarea>
-          <span class="pull-right"><input type="submit" value="submit us"></span>
+        <form id="messageForm">
+          <input type="text" name="title" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
+          <textarea name="content" onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....';" >Your Message here....</textarea>
+
+          <span class="pull-right">
+            <input type="submit" onclick="commit()" value="submit us">
+          </span>
         </form>
       </div>
       <div class="col-md-4  contact_right">
