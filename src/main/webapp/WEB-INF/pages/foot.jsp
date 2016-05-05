@@ -6,22 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link href="${pageContext.request.contextPath}/resources/css/common.css" rel='stylesheet' type='text/css' />
 <script type="text/javascript">
-  function commit(){
-    $.ajax({
-      cache:false,
-      type:"POST",
-      url:"/saveMessages",
-      data:$('#messageForm').serialize(),
-      async:false,
-      error:function(request){
-        alert("留言失败！");
-      },
-      success:function(){
-        alert("留言成功！")
+  $(function(){
+    $("#save").click(function(){
+      var title = $("#Mtitle").val();
+      var content = $("#Mcontent").val();
+      if(title !=""&& content !=""){
+        var url ="${pageContext.request.contextPath}/saveMessage";
+        var args = {"title":title,"content":content};
+        $.post(url,args,function(){
+          alert("留言成功！")
+        });
+      }else{
+        alert("主题和内容都不能为空！");
       }
     });
-  }
+  })
 </script>
 <div class="footer_bg" id="contact"><!-- start footer -->
   <div class="container">
@@ -30,11 +31,11 @@
         <h3>Leave a message</h3>
         <h4>You can leave a message in below:</h4>
         <form id="messageForm">
-          <input type="text" name="title" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
-          <textarea name="content" onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....';" >Your Message here....</textarea>
+          <input id ="Mtitle" type="text" name="title" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
+          <textarea id ="Mcontent" name="content" onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....';" >Your Message here....</textarea>
 
           <span class="pull-right">
-            <input type="submit" onclick="commit()" value="submit us">
+            <input id="save" type="button" value="submit us" class="foot-button">
           </span>
         </form>
       </div>

@@ -70,8 +70,6 @@
           <li><a href="#" class="">1</a></li>
           <li><a href="#" class="">2</a></li>
           <li><a href="#" class="">3</a></li>
-
-
         </ul>
 
         <script src="${pageContext.request.contextPath}/resources/js/jquery.wmuSlider.js"></script>

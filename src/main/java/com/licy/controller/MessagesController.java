@@ -23,5 +23,6 @@ public class MessagesController {
         System.out.println(title+"......"+content);
         Messages message = new Messages(title,content);
         messagesService.add(message);
+//        return "test";
     }
 }
