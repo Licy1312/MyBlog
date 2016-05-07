@@ -7,10 +7,10 @@
       </div>
       <nav class="top-nav">
         <ul class="top-nav nav_list">
-          <li><a href="portfolio.html">Essays</a></li>
-          <li class="page-scroll"><a href="#about">Music</a></li>
-          <li class="logo page-scroll"><a title="hexa" href="index.html"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a></li>
-          <li class="page-scroll"><a href="blog.html">Picture</a></li>
+          <li><a href="${pageContext.request.contextPath}/essays">Essays</a></li>
+          <li class="page-scroll"><a href="${pageContext.request.contextPath}/music">Music</a></li>
+          <li class="logo page-scroll"><a  href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a></li>
+          <li class="page-scroll"><a href="${pageContext.request.contextPath}/picture">Picture</a></li>
           <li class="page-scroll"><a href="#contact">GuestBook</a></li>
         </ul>
         <a href="#" id="pull"><img src="${pageContext.request.contextPath}/resources/images/nav-icon.png" title="menu" /></a>

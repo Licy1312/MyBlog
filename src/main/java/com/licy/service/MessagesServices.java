@@ -9,7 +9,7 @@ import javax.inject.Inject;
 /**
  * Created by Administrator on 2016/5/4 0004.
  */
-@Service("MessagesService")
+@Service("messagesService")
 public class MessagesServices implements IMessagesService {
     private IMessagesDao messagesDao;
     @Inject

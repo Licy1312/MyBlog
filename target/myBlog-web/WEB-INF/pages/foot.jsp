@@ -10,13 +10,21 @@
 <script type="text/javascript">
   $(function(){
     $("#save").click(function(){
-      var title = $("#Mtitle").val();
-      var content = $("#Mcontent").val();
-      if(title !=""&& content !=""){
+
+      var title = $("#Mtitle").val().trim();
+      var content = $("#Mcontent").val().trim();
+      if(title!=""&& content!=""){
         var url ="${pageContext.request.contextPath}/saveMessage";
         var args = {"title":title,"content":content};
-        $.post(url,args,function(){
-          alert("留言成功！")
+        $.post(url,args,function(data){
+          if(data=="success"){
+            alert("留言成功！")
+            document.getElementById('Mtitle').innerHtml = 'abc';
+            $("#Mtitle").val("");
+            $("#Mcontent").val("");
+          }else{
+            alert("留言失败");
+          }
         });
       }else{
         alert("主题和内容都不能为空！");
@@ -31,8 +39,8 @@
         <h3>Leave a message</h3>
         <h4>You can leave a message in below:</h4>
         <form id="messageForm">
-          <input id ="Mtitle" type="text" name="title" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}">
-          <textarea id ="Mcontent" name="content" onFocus="if(this.value == 'Your Messages here....') this.value='';" onBlur="if(this.value == '') this.value='Your Messages here....';" >Your Message here....</textarea>
+          <input id ="Mtitle" type="text" name="title">
+          <textarea id ="Mcontent" name="content"></textarea>
 
           <span class="pull-right">
             <input id="save" type="button" value="submit us" class="foot-button">
