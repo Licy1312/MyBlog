@@ -22,4 +22,9 @@ public class MessagesController {
         messagesService.add(message);
         return "success";
     }
+    @RequestMapping("/test")
+    public String test(){
+
+        return "manager/test";
+    }
 }

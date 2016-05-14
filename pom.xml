@@ -19,6 +19,7 @@
     <dpcp2.version>2.1.1</dpcp2.version>
     <aspectj.version>1.7.2</aspectj.version>
     <slf4j.version>1.7.5</slf4j.version>
+    <sitemesh.version>3.0.0</sitemesh.version>
   </properties>
 
   <dependencies>
@@ -105,6 +106,12 @@
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>${aspectj.version}</version>
+    </dependency>
+    <!--sitemesh-->
+    <dependency>
+      <groupId>org.sitemesh</groupId>
+      <artifactId>sitemesh</artifactId>
+      <version>${sitemesh.version}</version>
     </dependency>
 
   </dependencies>
