@@ -2,18 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef7dd401-92ba-42b2-a692-66df0ce75081" name="Default" comment="完成前后台基本框架、主页面。">
+      <change type="DELETED" beforePath="D:\github\project\learn\MyBlog\.idea\libraries\Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\project\learn\MyBlog\.idea\libraries\Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\project\learn\MyBlog\target\myBlog-web\WEB-INF\lib\commons-dbcp-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\project\learn\MyBlog\target\myBlog-web\WEB-INF\lib\commons-pool-1.5.4.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/model/Accounts.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/model/Accounts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Accounts.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Accounts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/AccountsDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/AccountsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/AccountsDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/AccountsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/model/Articles.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/model/Articles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Articles.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Articles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/controller/ArticlesController.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/controller/ArticlesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/ArticlesController.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/ArticlesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/ArticlesDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/ArticlesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/ArticlesDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/ArticlesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/ArticlesService.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/ArticlesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/ArticlesService.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/ArticlesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/BaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/BaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IAccountsDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IAccountsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IAccountsDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IAccountsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IArticlesDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IArticlesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IArticlesDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IArticlesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/IArticlesService.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/IArticlesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IArticlesService.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IArticlesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IBaseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IBaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IBaseDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IBaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IMessagesDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IMessagesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IMessagesDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IMessagesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/IMessagesService.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/IMessagesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IMessagesService.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IMessagesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IMusicsDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IMusicsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IMusicsDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IMusicsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/IMusicsService.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/IMusicsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IMusicsService.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/IMusicsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/IUsersDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/IUsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IUsersDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/IUsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/model/Messages.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/model/Messages.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Messages.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Messages.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/controller/MessagesController.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/controller/MessagesController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/MessagesController.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/MessagesController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/MessagesDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/MessagesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/MessagesDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/MessagesDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/MessagesServices.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/MessagesServices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/MessagesServices.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/MessagesServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/licy/controller/MessagesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/licy/controller/MessagesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/licy/service/MessagesServices.java" afterPath="$PROJECT_DIR$/src/main/java/com/licy/service/MessagesServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/foot.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/foot.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/foot.jsp" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/foot.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/head.jsp" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/music.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/music.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/music.jsp" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/pages/music.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/model/Musics.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/model/Musics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Musics.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Musics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/controller/MusicsController.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/controller/MusicsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/MusicsController.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/controller/MusicsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/MusicsDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/MusicsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/MusicsDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/MusicsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/service/MusicsService.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/service/MusicsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/MusicsService.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/service/MusicsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/model/Users.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/model/Users.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Users.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/model/Users.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/licy/dao/UsersDao.class" afterPath="$PROJECT_DIR$/target/classes/com/licy/dao/UsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/UsersDao.class" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/com/licy/dao/UsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyBlog.iml" afterPath="$PROJECT_DIR$/MyBlog.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/MyBlog_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/MyBlog_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/beans.xml" afterPath="$PROJECT_DIR$/target/classes/beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/beans.xml" afterPath="$PROJECT_DIR$/target/myBlog-web/WEB-INF/classes/beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyBlog.iws" />
@@ -45,22 +97,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArticlesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/controller/ArticlesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MusicsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/controller/MusicsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#459#460#0" expanded="false" />
+                <element signature="e#489#490#0" expanded="false" />
+                <element signature="e#553#554#0" expanded="false" />
+                <element signature="e#585#586#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,7 +116,7 @@
       <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-12.15625">
               <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
               <folding />
             </state>
@@ -95,11 +143,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="music.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="music.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/music.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18039216">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state vertical-scroll-proportion="-5.75">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23589744">
+              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,46 +179,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessagesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/controller/MessagesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticlesService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/service/ArticlesService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <element signature="e#445#446#0" expanded="false" />
-                <element signature="e#472#473#0" expanded="false" />
-                <element signature="e#532#533#0" expanded="false" />
-                <element signature="e#559#560#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessagesServices.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/service/MessagesServices.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="e#419#420#0" expanded="false" />
-                <element signature="e#465#466#0" expanded="false" />
-                <element signature="e#519#520#0" expanded="false" />
-                <element signature="e#559#560#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -180,7 +208,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/blog-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/portfolio.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common.js" />
@@ -192,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/licy/model/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/licy/model/Accounts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/licy/model/Musics.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/beans.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/blog-common/src/main/java/com/licy/shu/base/IBaseDao.java" />
         <option value="$PROJECT_DIR$/blog-common/src/main/java/com/licy/shu/base/BaseDao.java" />
@@ -210,7 +236,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/licy/dao/UsersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/licy/service/IMessagesService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/fonts/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
@@ -229,6 +254,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/foot.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/music.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -293,6 +321,37 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Gradle</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -316,6 +375,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,20 +405,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -367,62 +414,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,15 +459,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.23212537" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -485,7 +474,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -913,6 +902,7 @@
       <workItem from="1462428758619" duration="9208000" />
       <workItem from="1462621249257" duration="9099000" />
       <workItem from="1462630912085" duration="240000" />
+      <workItem from="1463194943753" duration="4104000" />
     </task>
     <task id="LOCAL-00001" summary="完成对mode层的基本设计">
       <created>1462262401181</created>
@@ -924,7 +914,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48853000" />
+    <option name="totallyTimeSpent" value="52957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,35 +926,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07830343" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3050571" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3034258" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7226754" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48534203" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44535074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31647635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06188925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18154311" sideWeight="0.47468355" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18154311" sideWeight="0.5253165" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31164902" sideWeight="0.47468355" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18080357" sideWeight="0.5253165" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.04311649" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18154311" sideWeight="0.5253165" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41761827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41761827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07830343" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.04893964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3436482" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -994,14 +984,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/html5shiv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1149,14 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66952056">
-          <caret line="118" column="26" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/licy/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1211,27 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23232323">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.678572">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#1128#1153#0" expanded="true" />
-            <element signature="e#1186#1199#0" expanded="true" />
-            <element signature="e#1237#1255#0" expanded="true" />
-            <element signature="e#1293#1311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81313133">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,6 +1249,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#445#446#0" expanded="false" />
             <element signature="e#472#473#0" expanded="false" />
             <element signature="e#532#533#0" expanded="false" />
@@ -1309,6 +1263,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#419#420#0" expanded="false" />
             <element signature="e#465#466#0" expanded="false" />
             <element signature="e#519#520#0" expanded="false" />
@@ -1321,7 +1276,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,15 +1294,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#459#460#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1375,8 +1330,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/music.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18039216">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state vertical-scroll-proportion="-5.75">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.15625">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven/pro/repository/org/apache/commons/commons-dbcp2/2.1.1/commons-dbcp2-2.1.1.jar!/org/apache/commons/dbcp2/BasicDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0620916">
+          <caret line="719" column="41" selection-start-line="719" selection-start-column="41" selection-end-line="719" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27380952">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23589744">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
           <folding />
         </state>
       </provider>
