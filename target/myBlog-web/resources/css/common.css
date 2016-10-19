@@ -3,5 +3,319 @@
     height:35px;
    background-color: #2EB398;
     border-color: #2EB398;
+}
+.info{
+    width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+    clear: both;
+}
+.info figure{
+    display: inline-block;
+    width: 60%;
+    height: 250px;
+    position: relative;
+    animation: pageTop 6s ease 0.5s backwards;
+    float: left;
+}
+.info figcaption{
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background: rgba(153,153,153,.8);
+    color: white;
+    opacity: 0;
+    transition: opacity .75s ease-out;
+}
+.info figcaption strong {
+    display: block;
+    line-height: 40px;
+}
+.card{
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
+    border-radius: 6px;
+    background: url(../images/quote-bg.png) no-repeat top right rgba(42,42,42,1);
+    width: 35%;
+    float: right;
+    height: 250px;
+    overflow: hidden;
+}
+.card h1 {
+    padding: 10px;
+}
+.card p {
+    padding: 0 0 0 40px;
+    /*line-height: 28px;*/
+    text-shadow: 0px 1px 2px rgba(0,0,0,.5);
+    color: #89919a;
+    -webkit-animation: animations2 5s ease-in-out 5s;
+    -moz-animation: animations2 5s ease-in-out 5s;
+    -o-animation: animations2 5s ease-in-out 5s;
+    -ms-animation: animations2 5s ease-in-out 5s;
+    animation: animations2 5s ease-in-out 5s;
+}
+.intro{
+    margin: 5px 0 0 -20px;
+}
+ul, ol {
+    list-style: none;
+}
+.intro li a{
+    height: 50px;
+    width: 50px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
+    border-radius: 50%;
+    float: left;
+    margin: 0 6px;
+}
+.intro li a:hover {
+    opacity: 0.5;
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+a:hover {
+    color: #fff;
+}
 
+.talk {
+    background-position: 13px 18px !important;
+}
+.addresses {
+    background-position: 12px -22px !important;
+}
+.email {
+    background-position: 12px -60px !important;
+}
+.photos {
+    background-position: 12px -137px !important;
+}
+.heart {
+    background-position: 13px -99px !important;
+}
+.talk, .addresses, .email, .photos, .heart {
+    background: url(../images/icons.png) no-repeat;
+}
+.blogs {
+    width: 1000px;
+    margin: 0 auto 20px;
+}
+.bloglist {
+    width: 63%;
+    float: left;
+    padding-left: 0px;
+}
+.bloglist>li {
+    border-right: #111 2px solid;
+    padding: 5px 0;
+}
+.arrow_box {
+    background: #222;
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
+    width: 96.5%;
+    color: #b9b9b9;
+    border-radius: 6px;
+    position: relative;
+}
+.ti {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0px 0 20px 22px;
+    border-color: transparent transparent transparent #111;
+    position: absolute;
+    left: 100%;
+    top: 20px;
+}
+.ci {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 103%;
+    top: 16px;
+    background: #000;
+    border: 2px solid #333;
+}
+.arrow_box h2.title {
+    padding: 0 0 0 20px;
+    font: 16px/50px "微软雅黑", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+.textinfo {
+    overflow: hidden;
+}
+.arrow_box img {
+    width: 150px;
+    padding: 4px;
+    float: left;
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -ms-transition: All 1s ease;
+    -o-transition: All 1s ease;
+    border-radius: 4px;
+    margin: 0 20px 20px;
+}
+.arrow_box p {
+    line-height: 24px;
+    padding: 0 20px 20px;
+}
+.details {
+    background: rgba(1,1,1,0.3);
+    border-radius: 0 0 6px 6px;
+    padding: 0 10px;
+}
+.details li {
+    line-height: 26px;
+    display: inline;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.details li a {
+    color: #3F3E3C;
+}
+.likes {
+    background-position: 0 -240px !important;
+}
+.comments {
+    background-position: 0 -220px !important;
+}
+.icon-time {
+    background-position: 0 -208px !important;
+    padding: 0 0 0 18px;
+}
+.likes, .comments {
+    float: right;
+    padding: 0 0 0 14px;
+}
+.icon-time, .likes, .comments {
+    background: url(../images/icons.png) no-repeat;
+}
+aside{
+    display: block;
+}
+aside div {
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
+    border-radius: 6px;
+    padding: 15px;
+    background: #222;
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: right;
+    width: 35%;
+}
+.tuijian li, .clicks li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.tuijian li:first-child span {
+    color: #f8490b;
+}
+.tuijian li:nth-child(-n+3) span {
+    width: 39px;
+    color: #999;
+}
+.tuijian li span {
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.toppic ul li a {
+    display: block;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+aside h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: #000 1px 1px 1px;
+    color: #ccc;
+}
+.clicks li {
+    line-height: 24px;
+}
+.clicks li span a {
+    padding: 0 5px;
+    color: #366;
+}
+.searchform {
+    overflow: hidden;
+    padding: 10px;
+}
+.search form {
+    display: block;
+    margin-top: 0em;
+}
+.searchform input {
+    background: rgba(0, 0, 0, 0.25) url(../images/icons.png) no-repeat 3px -318px;
+    border: 1px solid #111;
+    width: 220px;
+    line-height: 30px;
+    color: #b9b9b9;
+    padding-left: 30px;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.art {
+    background: url(../images/vinyl.png) no-repeat left;
+    width: 130px;
+    float: left;
+    background-size: 120px;
+}
+dt {
+    display: block;
+}
+.viny .art img {
+    width: 90px;
+    height: 90px;
+    margin-left: 11px;
+}
+.viny dl dd {
+    color: #b9b9b9;
+    line-height: 24px;
+}
+dd {
+    display: block;
+    -webkit-margin-start: 40px;
+}
+.icon-song span {
+    background-position: -33px -344px !important;
+}
+.icon-artist span {
+    background-position: -16px -344px !important;
+}
+.icon-album span {
+    background-position: 0 -344px !important;
+}
+.icon-like span {
+    background-position: -1px -299px !important;
+}
+.viny dd span {
+    width: 12px;
+    height: 24px;
+    margin-right: 7px;
+    float: left;
+    display: block;
+}
+.icon-song span, .icon-artist span, .icon-album span, .icon-like span {
+    background: url(../images/icons.png) no-repeat;
+}
+.music audio {
+    width: 100%;
+    padding-top: 10px;
+}
+audio {
+    width: 300px;
+    height: 30px;
 }
