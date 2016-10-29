@@ -16,7 +16,8 @@
 	<!-- 设定Spring 去哪些包中找Annotation -->
 	<context:component-scan base-package="com.licy" />
 
-
+	<!--创建Spring的SessionFactory工厂 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -35,8 +36,7 @@
 		<property name="maxIdle" value="20" />
 		<property name="maxWaitMillis" value="1000" />
 	</bean>
-	<!--创建Spring的SessionFactory工厂 -->
-	<context:property-placeholder location="classpath:jdbc.properties" />
+
 	<!-- 和hibernate4整合没有提供专门的针对Annotation的类，直接在LocalSessionFactoryBean中已经集成-->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

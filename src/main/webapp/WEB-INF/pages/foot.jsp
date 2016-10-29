@@ -8,14 +8,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link href="${pageContext.request.contextPath}/resources/css/common.css" rel='stylesheet' type='text/css' />
 <script type="text/javascript">
+  var ipname;
+  $(document).ready(function () {
+    $.getJSON("http://jsonip.com/?callback=?", function (data) {
+      console.log(data);
+      ipname = data.ip;
+    });
+  })
+
   $(function(){
     $("#save").click(function(){
-
       var title = $("#Mtitle").val().trim();
       var content = $("#Mcontent").val().trim();
       if(title!=""&& content!=""){
         var url ="${pageContext.request.contextPath}/saveMessage";
-        var args = {"title":title,"content":content};
+        var args = {"user":ipname,"title":title,"content":content};
         $.post(url,args,function(data){
           if(data=="success"){
             alert("留言成功！")

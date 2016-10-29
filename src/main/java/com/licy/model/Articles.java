@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by Administrator on 2016/5/1 0001.
@@ -20,8 +20,8 @@ public class Articles {
     private String D_topics;
     private String D_content;
     private String D_resources;
-    private Date create_time;
-    private Date update_time;
+    private Timestamp create_time;
+    private Timestamp update_time;
 
     public Articles(int d_id, String d_title, String d_content) {
         this.d_id = d_id;
@@ -101,19 +101,19 @@ public class Articles {
         D_resources = d_resources;
     }
 
-    public Date getCreate_time() {
+    public Timestamp getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(Date create_time) {
+    public void setCreate_time(Timestamp create_time) {
         this.create_time = create_time;
     }
 
-    public Date getUpdate_time() {
+    public Timestamp getUpdate_time() {
         return update_time;
     }
 
-    public void setUpdate_time(Date update_time) {
+    public void setUpdate_time(Timestamp update_time) {
         this.update_time = update_time;
     }
 }

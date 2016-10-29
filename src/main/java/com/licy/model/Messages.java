@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by Administrator on 2016/4/30 0030.
@@ -16,7 +16,7 @@ public class Messages {
     private String title;
     private String author;
     private String content;
-    private Date create_time;
+    private Timestamp create_time;
 
     public Messages(int id, String title, String content) {
         this.id = id;
@@ -24,9 +24,11 @@ public class Messages {
         this.content = content;
     }
 
-    public Messages(String title, String content) {
+    public Messages(String author,String title, String content,Timestamp create_time) {
+        this.author = author;
         this.title = title;
         this.content = content;
+        this.create_time = create_time;
     }
     public Messages(){
 
@@ -39,11 +41,11 @@ public class Messages {
     public void setId(int id) {
         this.id = id;
     }
-    public Date getCreate_time() {
+    public Timestamp getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(Date create_time) {
+    public void setCreate_time(Timestamp create_time) {
         this.create_time = create_time;
     }
 

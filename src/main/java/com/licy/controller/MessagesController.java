@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
+
 /**
  * Created by Administrator on 2016/5/4 0004.
  */
@@ -17,14 +19,14 @@ public class MessagesController {
 
     @ResponseBody
     @RequestMapping("/saveMessage")
-    public String saveMessage(String title,String content){
-        Messages message = new Messages(title,content);
+    public String saveMessage(String user,String title,String content){
+        Date now = new Date();
+        Messages message = new Messages(user,title,content,new java.sql.Timestamp(now.getTime()));
         messagesService.add(message);
         return "success";
     }
     @RequestMapping("/test")
     public String test(){
-
         return "manager/test";
     }
 }

@@ -1,0 +1,11 @@
+.menu li{
+    border-color: #dcd9d9;
+    background-color: whitesmoke;
+}
+.pop-div{
+    height: 180px;
+}
+.pop-input{
+    font-size: 22px !important;
+    margin-top: -10px !important;
+}
