@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemesh>
-
+    <mapping path="pages/manager/notes.jsp" decorator="pages/manager/home.jsp"/>
     <mapping path="/*"  decorator="/decorator/main.jsp"/>
-
 
     <mapping path="/exclude.jsp*"  exclue="true" />
 </sitemesh>

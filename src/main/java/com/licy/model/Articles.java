@@ -17,21 +17,22 @@ public class Articles {
     private String d_title;
     private String d_abstract;
     private String d_keywords;
-    private String D_topics;
-    private String D_content;
-    private String D_resources;
+    private String d_topics;
+    private String d_content;
+    private String d_resources;
     private Timestamp create_time;
     private Timestamp update_time;
+    private int note_id;
 
     public Articles(int d_id, String d_title, String d_content) {
         this.d_id = d_id;
         this.d_title = d_title;
-        D_content = d_content;
+        d_content = d_content;
     }
 
     public Articles(String d_title, String d_content) {
         this.d_title = d_title;
-        D_content = d_content;
+        d_content = d_content;
     }
     public Articles(){
     }
@@ -78,27 +79,27 @@ public class Articles {
     }
 
     public String getD_topics() {
-        return D_topics;
+        return d_topics;
     }
 
     public void setD_topics(String d_topics) {
-        D_topics = d_topics;
+        d_topics = d_topics;
     }
 
     public String getD_content() {
-        return D_content;
+        return d_content;
     }
 
     public void setD_content(String d_content) {
-        D_content = d_content;
+        d_content = d_content;
     }
 
     public String getD_resources() {
-        return D_resources;
+        return d_resources;
     }
 
     public void setD_resources(String d_resources) {
-        D_resources = d_resources;
+        d_resources = d_resources;
     }
 
     public Timestamp getCreate_time() {
@@ -115,5 +116,13 @@ public class Articles {
 
     public void setUpdate_time(Timestamp update_time) {
         this.update_time = update_time;
+    }
+
+    public int getNote_id() {
+        return note_id;
+    }
+
+    public void setNote_id(int note_id) {
+        this.note_id = note_id;
     }
 }

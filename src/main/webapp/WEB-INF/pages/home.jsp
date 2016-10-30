@@ -8,6 +8,7 @@
   <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
 
   <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/music/css/lanrenzhijia.css" type="text/css" />
   <!-- start plugins -->
   <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/common.js"></script>
@@ -27,75 +28,20 @@
 
 <div class="slider_bg"><!-- start slider -->
   <div class="container">
-    <%--<div class="row slider">--%>
-      <%--<div class="wmuSlider example1"><!-- start wmuSlider example1 -->--%>
-
-        <%--<div class="wmuSliderWrapper">--%>
-
-          <%--<article style="position: absolute; width: 100%; opacity: 0;">--%>
-            <%--<div class="slider_img text-center">--%>
-              <%--<ul class="list-unstyled list_imgs">--%>
-                <%--<li><a title="Go to Essays" href="#"><img src="${pageContext.request.contextPath}/resources/images/chun.jpg" alt="" class="responsive"/></a></li>--%>
-              <%--</ul>--%>
-            <%--</div>--%>
-          <%--</article>--%>
-
-          <%--<article style="position: relative; width: 100%; opacity: 1;">--%>
-            <%--<div class="slider_img text-center">--%>
-              <%--<ul class="list-unstyled list_imgs">--%>
-                <%--<li><a title="Go to Music" href="#"><img src="${pageContext.request.contextPath}/resources/images/xia.jpg" alt="" class="responsive"/></a></li>--%>
-              <%--</ul>--%>
-            <%--</div>--%>
-          <%--</article>--%>
-          <%--<article style="position: relative; width: 100%; opacity: 2;">--%>
-            <%--<div class="slider_img text-center">--%>
-              <%--<ul class="list-unstyled list_imgs">--%>
-                <%--<li><a title="Go to Picture" href="#"><img src="${pageContext.request.contextPath}/resources/images/qiu.jpg" alt="" class="responsive"/></a></li>--%>
-              <%--</ul>--%>
-            <%--</div>--%>
-          <%--</article>--%>
-          <%--<article style="position: relative; width: 100%; opacity: 3;">--%>
-            <%--<div class="slider_img text-center">--%>
-              <%--<ul class="list-unstyled list_imgs">--%>
-                <%--<li><a title="Go to GuestBook" href="#contact"><img src="${pageContext.request.contextPath}/resources/images/dong.jpg" alt="" class="responsive"/></a></li>--%>
-              <%--</ul>--%>
-            <%--</div>--%>
-          <%--</article>--%>
-
-
-        <%--</div>--%>
-
-        <%--<ul class="wmuSliderPagination">--%>
-          <%--<li><a href="#" class="">0</a></li>--%>
-          <%--<li><a href="#" class="">1</a></li>--%>
-          <%--<li><a href="#" class="">2</a></li>--%>
-          <%--<li><a href="#" class="">3</a></li>--%>
-        <%--</ul>--%>
-
-        <%--<script src="${pageContext.request.contextPath}/resources/js/jquery.wmuSlider.js"></script>--%>
-        <%--<script>--%>
-          <%--$('.example1').wmuSlider();--%>
-        <%--</script>--%>
-
-      <%--</div><!-- end wmuSlider example1 -->--%>
-
-      <%--<div class="clearfix"></div>--%>
-    <%--</div>--%>
       <div class="info" >
         <figure > <img src="${pageContext.request.contextPath}/resources/images/art.jpg"  alt="Panama Hat">
           <figcaption><strong>渡人如渡己，渡已，亦是渡</strong> 当我们被误解时，会花很多时间去辩白。 但没有用，没人愿意听，大家习惯按自己的所闻、理解做出判别，每个人其实都很固执。与其努力且痛苦的试图扭转别人的评判，不如默默承受，给大家多一点时间和空间去了解。而我们省下辩解的功夫，去实现自身更久远的人生价值。其实，渡人如渡己，渡已，亦是渡人。</figcaption>
         </figure>
         <div class="card">
           <h1>我的名片</h1>
-          <p>网名：DanceSmile | 即步非烟</p>
-          <p>职业：Web前端设计师、网页设计</p>
-          <p>电话：13662012345</p>
-          <p>Email：dancesmiling@qq.com</p>
+          <p>网名：Yage | Sober </p>
+          <p>职业：学生、Java开发工程师</p>
+          <p>电话：15201895065</p>
+          <p>Email：licy1312@163.com</p>
           <ul class="intro">
             <li><a href="/" class="talk" title="给我留言"></a></li>
             <li><a href="/" class="addresses" title="联系地址"></a></li>
             <li><a href="/" class="email" title="给我写信"></a></li>
-            <li><a href="/" class="photos" title="生活照片"></a></li>
             <li><a href="/" class="heart" title="关注我"></a></li>
           </ul>
         </div>
@@ -248,25 +194,45 @@
               <li><span><a href="/">古典风格</a></span><a href="/">花气袭人是酒香—个人网站模板</a></li>
             </ol>
           </div>
-          <div class="viny">
-            <dl>
-              <dt class="art"><img src="${pageContext.request.contextPath}/resources/images/artwork.png" alt="专辑"></dt>
-              <dd class="icon-song"><span></span>南方姑娘</dd>
-              <dd class="icon-artist"><span></span>歌手：赵雷</dd>
-              <dd class="icon-album"><span></span>所属专辑：《赵小雷》</dd>
-              <dd class="icon-like"><span></span><a href="/">喜欢</a></dd>
-              <dd class="music">
-                <audio src="" controls></audio>
-              </dd>
-              <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
-            </dl>
-          </div>
         </aside>
+        <div class="music-player" style="margin-right: 0px;margin-bottom: 0px;">
+          <div class="info" style="margin-top: 0px;margin-bottom: 0px;">
+            <div class="left"> <a href="javascript:;" class="icon-shuffle"></a> <a href="javascript:;" class="icon-heart"></a> </div>
+            <div class="center">
+              <div class="jp-playlist">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+            <div class="right"> <a href="javascript:;" class="icon-repeat"></a> <a href="javascript:;" class="icon-share"></a> </div>
+            <div class="progress jp-seek-bar" style="width: 100%;margin-top: 10px;top: 67px;margin-bottom: 0px;"> <span class="jp-play-bar" style="width: 0%"></span> </div>
+          </div>
+          <div class="controls">
+            <div class="current jp-current-time">00:00</div>
+            <div class="play-controls">
+              <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
+              <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+              <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+              <a href="javascript:;" class="icon-next jp-next" title="next"></a>
+            </div>
+            <div class="volume-level jp-volume-bar">
+              <span class="jp-volume-bar-value" style="width: 0%"></span>
+              <a href="javascript:;" class="icon-volume-up jp-volume-max" title="max volume"></a>
+              <a href="javascript:;" class="icon-volume-down jp-mute" title="mute"></a>
+            </div>
+          </div>
+          <div id="jquery_jplayer" class="jp-jplayer"></div>
+        </div>
       </div>
       <!--blogs end-->
   </div>
 </div>
 <!--  foot -->
 <jsp:include page="foot.jsp"></jsp:include>
+<%--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>--%>
+<script src="${pageContext.request.contextPath}/resources/music/js/jquery.jplayer.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/music/js/jplayer.playlist.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/music/js/lanrenzhijia.js"></script>
 </body>
 </html>

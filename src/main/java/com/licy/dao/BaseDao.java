@@ -29,13 +29,13 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	/**
-	 * ´´½¨Ò»¸öClassµÄ¶ÔÏóÀ´»ñÈ¡·ºÐÍµÄclass
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Classï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Íµï¿½class
 	 */
 	private Class<?> clz;
 
 	public Class<?> getClz() {
 		if (clz == null) {
-			//»ñÈ¡·ºÐÍµÄClass¶ÔÏó
+			//ï¿½ï¿½È¡ï¿½ï¿½ï¿½Íµï¿½Classï¿½ï¿½ï¿½ï¿½
 			clz = ((Class<?>)
 					(((ParameterizedType) (this.getClass().getGenericSuperclass())).getActualTypeArguments()[0]));
 		}
@@ -63,10 +63,15 @@ public class BaseDao<T> implements IBaseDao<T> {
 	public T load(int id) {
 		return (T) getSession().load(getClz(), id);
 	}
+	@Override
+	public List<T> get(String hql){
+		Query query = getSession().createQuery(hql);
+		return query.list();
+	}
 
 	/* 
-	 * ²»·ÖÒ³µÄ²éÑ¯
-	 * ¸ù¾ÝsqlÓï¾äºÍ²éÑ¯²ÎÊý£¬·µ»ØÒ»ÁÐ¶ÔÏó
+	 * ï¿½ï¿½ï¿½ï¿½Ò³ï¿½Ä²ï¿½Ñ¯
+	 * ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½Í²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ð¶ï¿½ï¿½ï¿½
 	 */
 	public List<T> list(String hql, Object[] args) {
 		return this.list(hql, args, null);
@@ -83,7 +88,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	/**
-	 * ÓÐÊ±ºòÐèÒªÍ¨¹ý±ðÃû½øÐÐ²éÑ¯£¬Èç£º
+	 * ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ÒªÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Ñ¯ï¿½ï¿½ï¿½ç£º
 	 * Select role from Role where role.user.id in(:ids) and username = :username and nickname=?
 	 * @param hql
 	 * @param args
@@ -96,7 +101,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 		setParameter(query, args);
 		return query.list();
 	}
-	//»ùÓÚ±ðÃû²ÎÊý¸³Öµ
+	//ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 	@SuppressWarnings("rawtypes")
 	private void setAliasParameter(Query query, Map<String, Object> alias) {
 		if (alias != null) {
@@ -104,7 +109,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 			for (String key : keys) {
 				Object val = alias.get(key);
 				if (val instanceof Collection) {
-					// ²éÑ¯Ìõ¼þÊÇÁÐ±í
+					// ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
 					query.setParameterList(key, (Collection) val);
 				} else {
 					query.setParameter(key, val);
@@ -112,7 +117,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 			}
 		}
 	}
-	//ÆÕÍ¨²ÎÊýµÄ¸³Öµ
+	//ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½Öµ
 	private void setParameter(Query query, Object[] args) {
 		if (args != null && args.length > 0) {
 			int index = 0;

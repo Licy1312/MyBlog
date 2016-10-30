@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lingling
@@ -65,23 +66,16 @@
             <b class="arrow"></b>
 
             <ul class="submenu">
+            <c:forEach items="${notes}" var="note" varStatus="vs">
                 <li class="">
-                    <a href="tables.html">
+                    <a href="${pageContext.request.contextPath}/manager/menu/${note.note_id}">
                         <i class="menu-icon fa fa-caret-right"></i>
-                        Simple &amp; Dynamic
+                        ${note.note_name}
+                        (${note.num})
                     </a>
-
                     <b class="arrow"></b>
                 </li>
-
-                <li class="">
-                    <a href="jqgrid.html">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        jqGrid plugin
-                    </a>
-
-                    <b class="arrow"></b>
-                </li>
+            </c:forEach>
             </ul>
         </li>
         <!--留言板-->
@@ -224,18 +218,17 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="${pageContext.request.contextPath}/manager/saveMenu">
                         <div class="form-group">
                             <label for="recipient-name" class="form-control-label">新的笔记本：</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" name="noteName" class="form-control" id="recipient-name">
                         </div>
                         <div class="clearfix">
-                            <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                            <input type="submit" value="确定" class="width-35 pull-right btn btn-sm btn-primary">
+                            <%--<button type="button" class="width-35 pull-right btn btn-sm btn-primary">--%>
 
-                                <span class="bigger-110">确定</span>
-                            </button>
+                            <%--</button>--%>
                         </div>
-
                     </form>
                 </div>
             </div>

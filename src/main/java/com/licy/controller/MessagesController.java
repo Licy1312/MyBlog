@@ -1,6 +1,7 @@
 package com.licy.controller;
 
 import com.licy.model.Messages;
+import com.licy.service.IManagerService;
 import com.licy.service.IMessagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ public class MessagesController {
     @Autowired
     private IMessagesService messagesService;
 
+
     @ResponseBody
     @RequestMapping("/saveMessage")
     public String saveMessage(String user,String title,String content){
@@ -29,4 +31,5 @@ public class MessagesController {
     public String test(){
         return "manager/test";
     }
+
 }

@@ -1,33 +1,37 @@
 package com.licy.dao;
 
+import java.util.List;
+
 /**
- * ¹«¹²µÄDAO´¦Àí¶ÔÏó£¬Õâ¸ö¶ÔÏóÖĞ°üº¬ÁËHibernateµÄËùÓĞ»ù±¾²Ù×÷ºÍ¶ÔSQLµÄ²Ù×÷
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DAOï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ°ï¿½ï¿½ï¿½ï¿½ï¿½Hibernateï¿½ï¿½ï¿½ï¿½ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½SQLï¿½Ä²ï¿½ï¿½ï¿½
  * @author Administrator
  * @param <T>
  */
 public interface IBaseDao<T> {
 	/**
-	 * Ìí¼Ó¶ÔÏó
+	 * ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½
 	 * @param t
 	 * @return
 	 */
 	public T add(T t);
 	/**
-	 * ¸üĞÂ¶ÔÏó
+	 * ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½
 	 * @param t
 	 */
 	public void update(T t);
 	/**
-	 * ¸ù¾İidÉ¾³ı¶ÔÏó
+	 * ï¿½ï¿½ï¿½ï¿½idÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param id
 	 */
 	public void delete(int id);
 	/**
-	 * ¸ù¾İid¼ÓÔØ¶ÔÏó
+	 * ï¿½ï¿½ï¿½ï¿½idï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½
 	 * @param id
 	 * @return
 	 */
 	public T load(int id);
+
+	public List<T> get(String hql);
 
 }
 
