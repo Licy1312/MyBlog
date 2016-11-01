@@ -16,8 +16,10 @@
     <link href="${project}/resources/fonts/css/ace-rtl.css" rel="stylesheet"  />
     <link href="${project}/resources/fonts/css/ace-ie.css" rel="stylesheet"  />
     <link href="${project}/resources/css/manager.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="${project}/resources/editor/wangEditor.css">
     <!-- start plugins -->
     <script src="${project}/resources/js/jquery-1.12.3.min.js"  type="text/javascript"></script>
     <script src="${project}/resources/js/bootstrap.js"></script>
     <script src="${project}/resources/js/ace.js"></script>
     <script src="${project}/resources/js/ace.sidebar.js"></script>
+    <script  src="${project}/resources/editor/wangEditor.js" type="text/javascript"></script>

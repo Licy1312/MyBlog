@@ -16,7 +16,7 @@
                     <i class="ace-icon fa fa-signal"></i>
                 </button>
             </a>
-            <a  title="添加笔记">
+            <a  title="添加笔记" href="${pageContext.request.contextPath}/manager/editNote">
                 <button class="btn btn-info">
                     <i class="ace-icon fa fa-pencil"></i>
                 </button>
@@ -203,12 +203,13 @@
                 </li>
             </ul>
         </li>
-    </ul><!-- /.nav-list -->
+    </ul>
 
-    <!-- #section:basics/sidebar.layout.minimize -->
+    <!-- 伸缩 -->
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
         <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
     </div>
+    <!--添加笔记本弹出框-->
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content pop-div">
@@ -220,19 +221,17 @@
                 <div class="modal-body">
                     <form action="${pageContext.request.contextPath}/manager/saveMenu">
                         <div class="form-group">
-                            <label for="recipient-name" class="form-control-label">新的笔记本：</label>
+                            <label for="recipient-name" class="form-control-label">新笔记本：</label>
                             <input type="text" name="noteName" class="form-control" id="recipient-name">
                         </div>
                         <div class="clearfix">
                             <input type="submit" value="确定" class="width-35 pull-right btn btn-sm btn-primary">
-                            <%--<button type="button" class="width-35 pull-right btn btn-sm btn-primary">--%>
-
-                            <%--</button>--%>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 

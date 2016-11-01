@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by Lingling on 2016/10/29.
@@ -35,5 +34,14 @@ public class ManagerController {
     public String getNote(@PathVariable("id") int id ,Model model){
         model.addAttribute("tempNotes",managerService.getByNoteId(id));
         return "manager/notes";
+    }
+    @RequestMapping("/saveNote")
+    public String saveNote(String noteId,String article_name,String content){
+
+        return "success";
+    }
+    @RequestMapping("/editNote")
+    public String editNote(){
+        return "manager/editNote";
     }
 }
