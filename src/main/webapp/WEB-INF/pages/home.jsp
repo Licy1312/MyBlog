@@ -34,14 +34,14 @@
         </figure>
         <div class="card">
           <h1>我的名片</h1>
-          <p>网名：Yage | Sober </p>
-          <p>职业：学生、Java开发工程师</p>
+          <p>姓名：李昌亚 </p>
+          <p>职业：在校学生（目前）</p>
           <p>电话：15201895065</p>
           <p>Email：licy1312@163.com</p>
           <ul class="intro">
-            <li><a href="/" class="talk" title="给我留言"></a></li>
+            <li><a href="#contact" class="talk" title="给我留言"></a></li>
             <li><a href="/" class="addresses" title="联系地址"></a></li>
-            <li><a href="/" class="email" title="给我写信"></a></li>
+            <li><a href="/" class="email" title="留言板"></a></li>
             <li><a href="/" class="heart" title="关注我"></a></li>
           </ul>
         </div>
@@ -195,7 +195,7 @@
             </ol>
           </div>
         </aside>
-        <div class="music-player" style="margin-right: 0px;margin-bottom: 0px;">
+        <div class="music-player"  id="music" style="margin-right: 0px;margin-bottom: 0px;">
           <div class="info" style="margin-top: 0px;margin-bottom: 0px;">
             <div class="left"> <a href="javascript:;" class="icon-shuffle"></a> <a href="javascript:;" class="icon-heart"></a> </div>
             <div class="center">
@@ -212,7 +212,7 @@
             <div class="current jp-current-time">00:00</div>
             <div class="play-controls">
               <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
-              <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+              <a href="javascript:;" class="icon-play jp-play" id="playMusic" title="play"></a>
               <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
               <a href="javascript:;" class="icon-next jp-next" title="next"></a>
             </div>
@@ -234,5 +234,20 @@
 <script src="${pageContext.request.contextPath}/resources/music/js/jquery.jplayer.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/music/js/jplayer.playlist.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/music/js/lanrenzhijia.js"></script>
+<script type="text/javascript">
+  // 两秒后模拟点击
+  setTimeout(function() {
+    // IE
+    if(document.all) {
+      document.getElementById("playMusic").click();
+    }
+    // 其它浏览器
+    else {
+      var e = document.createEvent("MouseEvents");
+      e.initEvent("click", true, true);
+      document.getElementById("playMusic").dispatchEvent(e);
+    }
+  }, 2000);
+</script>
 </body>
 </html>

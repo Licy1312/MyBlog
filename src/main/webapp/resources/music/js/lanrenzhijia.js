@@ -1,20 +1,20 @@
 $(document).ready(function(){
 
   var playlist = [{
-      title:"Hidden",
-      artist:"Miaow",
-      mp3:"http://demo.lanrenzhijia.com/2014/music0917/images/i1.mp3",
-      poster: "http://33.media.tumblr.com/0b35eb42176eedbf4a96e52efa760875/tumblr_mxp7a0v3fr1rqx86wo1_500.png"
+      title:"月半小夜曲 - 李克勤",
+      artist:"李克勤",
+      mp3:"resources/music/MP3/2.mp3",
+      poster: ""
     },{
       title:"Cro Magnon Man",
       artist:"The Stark Palace",
       mp3:"http://demo.lanrenzhijia.com/2014/music0917/images/i2.mp3",
-      poster: "http://33.media.tumblr.com/bf9dc125a47dcca91ce5b3575bc3ba92/tumblr_nbmb3j8nU51sq3g2zo1_500.png"
+      poster: ""
     },{
-      title:"Bubble",
-      m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-      oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg",
-      poster: "http://31.media.tumblr.com/810b1125a8b9e9f192d009ef58dceb07/tumblr_nbe8wsmKuz1rknpqyo1_500.jpg"
+      title:"丑八怪 - 薛之谦",
+      artist: " 薛之谦",
+      mp3: "resources/music/MP3/1.mp3",
+      poster: ""
   }];
   
   var cssSelector = {

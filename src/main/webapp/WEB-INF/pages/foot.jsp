@@ -43,19 +43,19 @@
   <div class="container">
     <div class="row footer">
       <div class="col-md-8 contact_left">
-        <h3>Leave a message</h3>
+        <h3>给我留言</h3>
         <h4>You can leave a message in below:</h4>
         <form id="messageForm">
           <input id ="Mtitle" type="text" name="title">
           <textarea id ="Mcontent" name="content"></textarea>
 
           <span class="pull-right">
-            <input id="save" type="button" value="submit us" class="foot-button">
+            <input id="save" type="button" value="确定" class="foot-button">
           </span>
         </form>
       </div>
       <div class="col-md-4  contact_right">
-        <p><span>Just a note: </span> <br/>Success is getting what you want, happiness is wanting what you get. <br/>A  strong  man will  struggle  with  the  storms  of  fate.The best preparation for tomorrow is doing your best today.</p>
+        <p><span>人生箴言: </span> <br/>Success is getting what you want, happiness is wanting what you get. <br/>A  strong  man will  struggle  with  the  storms  of  fate.The best preparation for tomorrow is doing your best today.</p>
         <ul class="list-unstyled address">
           <li><i class="fa fa-phone"></i><span> 15201895065</span></li>
           <li><i class="fa fa-envelope"></i><span>1749362086@qq.com</span></li>
