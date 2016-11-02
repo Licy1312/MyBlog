@@ -2,15 +2,20 @@ package com.licy.controller;
 
 import com.licy.service.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.UUID;
 
@@ -23,7 +28,8 @@ import java.util.UUID;
 public class ManagerController {
     @Autowired
     private IManagerService managerService;
-
+    @Value("${filePath}")
+    private String uploadPath;
     @RequestMapping("/login")
     public String test(){
         return "manager/login";
@@ -50,37 +56,21 @@ public class ManagerController {
         return "success";
     }
     @RequestMapping("/upload")
-    public void upload (HttpServletRequest request, HttpServletResponse response){
-        response.setContentType("textml;charset=UTF-8");
+    public void upload (@RequestParam("fileName") CommonsMultipartFile file, HttpServletRequest request, HttpServletResponse response){
+            String fileName = file.getOriginalFilename();
+            System.out.println("fileName---------->" + file.getOriginalFilename());
         try {
-            request.setCharacterEncoding("UTF-8");
-            Part part = request.getPart("fileName");// myFileName是文件域的name属性值
-            // 文件类型限制
-            String[] allowedType = { "image/bmp", "image/gif", "image/jpeg", "image/png" };
-            boolean allowed = Arrays.asList(allowedType).contains(part.getContentType());
-            if (!allowed) {
-                response.getWriter().write("error|不支持的类型");
-                return;
-            }
-            // 图片大小限制
-            if (part.getSize() > 5 * 1024 * 1024) {
-                response.getWriter().write("error|图片大小不能超过5M");
-                return;
-            }
-            // 包含原始文件名的字符串
-            String fi = part.getHeader("content-disposition");
-            // 提取文件拓展名
-            String fileNameExtension = fi.substring(fi.indexOf("."), fi.length() - 1);
-            // 生成实际存储的真实文件名
-            String realName = UUID.randomUUID().toString() + fileNameExtension;
+            file.transferTo(new File(uploadPath+fileName));
             // 图片存放的真实路径
-//            String realPath = this.getServletContext().getRealPath("/files") + "/" + realName;
-//            // 将文件写入指定路径下
-//            part.write(realPath);
+            String realPath = request.getServletContext().getRealPath("/upload") + "/" + fileName;
 
             // 返回图片的URL地址
-            response.getWriter().write(request.getContextPath() + "/files/" + realName);
-        } catch (Exception e) {
+           // request.getScheme()+":"+request.get
+            //${ctx_upload}
+            String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/upload/";
+            response.getWriter().write(basePath + fileName);
+         //   response.getWriter().write(uploadPath+fileName);
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

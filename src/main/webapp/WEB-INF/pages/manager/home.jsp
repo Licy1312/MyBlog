@@ -70,7 +70,7 @@
         $(function () {
             var editor = new wangEditor('div1');
             // 上传图片（举例）
-            editor.config.uploadImgUrl = '/manager/upload';
+            editor.config.uploadImgUrl = '${pageContext.request.contextPath}/manager/upload';
             editor.config.uploadImgFileName = 'fileName';
             editor.create();
             text =editor;
