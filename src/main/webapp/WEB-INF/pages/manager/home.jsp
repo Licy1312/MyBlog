@@ -69,12 +69,30 @@
         var text;
         $(function () {
             var editor = new wangEditor('div1');
+            // 上传图片（举例）
+            editor.config.uploadImgUrl = '/manager/upload';
+            editor.config.uploadImgFileName = 'fileName';
             editor.create();
             text =editor;
         });
-        $("#commit").click(function(){
-                alert(text.$txt.html());
-        })
+        $("#save").click(function(){
+
+            var noteId = $("#form-field-select-1").val().trim();
+            var title = $("#recipient-name").val().trim();
+            var url ="${pageContext.request.contextPath}/manager/saveNote";
+            var args = {"note_id":noteId,"title":title,"content":text};
+            $.post(url,args,function(data){
+                if(data=="success"){
+                    alert("留言成功！")
+                    document.getElementById('Mtitle').innerHtml = 'abc';
+                    $("#Mtitle").val("");
+                    $("#Mcontent").val("");
+                }else{
+                    alert("留言失败");
+                }
+            });
+        });
+
     </script>
 </body>
 </html>
