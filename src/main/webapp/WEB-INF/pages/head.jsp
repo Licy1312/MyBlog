@@ -10,8 +10,8 @@
           <li><a href="${pageContext.request.contextPath}/essays">笔记本</a></li>
           <li class="page-scroll"><a href="#music">音乐盒</a></li>
           <li class="logo page-scroll"><a  href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a></li>
-          <li class="page-scroll"><a href="${pageContext.request.contextPath}/picture">我是谁</a></li>
           <li class="page-scroll"><a href="#contact">留言板</a></li>
+          <li class="page-scroll"><a href="${pageContext.request.contextPath}/me">关于我</a></li>
         </ul>
         <a href="#" id="pull"><img src="${pageContext.request.contextPath}/resources/images/nav-icon.png" title="menu" /></a>
       </nav>

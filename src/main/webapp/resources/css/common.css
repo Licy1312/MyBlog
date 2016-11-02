@@ -5,7 +5,7 @@
     border-color: #2EB398;
 }
 .info{
-    width: 1000px;
+    width: 76%;
     margin: 40px auto;
     overflow: hidden;
     clear: both;
@@ -102,7 +102,7 @@ a:hover {
     background: url(../images/icons.png) no-repeat;
 }
 .blogs {
-    width: 1000px;
+    width: 76%;
     margin: 0 auto 20px;
 }
 .bloglist {

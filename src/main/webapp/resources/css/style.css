@@ -114,6 +114,7 @@ nav a#pull {
 /* start slider */
 .slider_bg{
 	background: #ffffff;
+	width: 100%;
 }
 .list_imgs li{
 	display: block;

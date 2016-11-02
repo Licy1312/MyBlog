@@ -44,4 +44,8 @@ public class ManagerController {
     public String editNote(){
         return "manager/editNote";
     }
+    @RequestMapping("/me")
+    public String about(){
+        return "me";
+    }
 }
