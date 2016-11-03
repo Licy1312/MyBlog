@@ -43,6 +43,8 @@ body {
   margin-left: 0;
   min-height: 100%;
   padding: 0;
+  width: 83%;
+  float: left;
 }
 .main-content:before,
 .main-content:after {
@@ -53,7 +55,7 @@ body {
   clear: both;
 }
 .sidebar + .main-content {
-  margin-left: 190px;
+
 }
 .page-content {
   background-color: #ffffff;
@@ -1968,7 +1970,7 @@ pre.prettyprint {
   margin-left: 7px;
 }
 .sidebar {
-  width: 220px;
+  width:17%;
   float: left;
   position: static;
   padding-left: 0;
@@ -4061,12 +4063,12 @@ body.mob-safari .sidebar.sidebar-fixed {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-fixed-top + .main-container.container .sidebar.navbar-collapse {
-    width: 744px !important;
+    width: 100% !important;
   }
 }
 .main-content-inner {
   float: left;
-  width: 95%;
+  width: 100%;
 }
 .main-content .sidebar:before {
   top: 150px;
@@ -5201,9 +5203,6 @@ body.mob-safari .sidebar.sidebar-fixed {
   }
 }
 .footer {
-  padding-top: 75px;
-  height: 0;
-  width: 0;
 }
 .footer .footer-inner {
   text-align: center;
@@ -5218,7 +5217,7 @@ body.mob-safari .sidebar.sidebar-fixed {
 }
 @media (min-width: 992px) {
   .sidebar.compact ~ .footer .footer-inner {
-    left: 105px;
+
   }
 }
 .sidebar.menu-min ~ .footer .footer-inner {
@@ -5331,13 +5330,9 @@ body.mob-safari .sidebar.sidebar-fixed {
   }
 }
 .footer .footer-inner .footer-content {
-  position: absolute;
-  left: 12px;
-  right: 12px;
   bottom: 4px;
   padding: 8px;
   line-height: 36px;
-  border-top: 3px double #E5E5E5;
 }
 .footer.footer-fixed .footer-inner {
   position: fixed;

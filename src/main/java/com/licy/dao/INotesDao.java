@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface INotesDao extends IBaseDao<Notes> {
     public List<Notes> getAll();
+    public int update(int note_id);
 }

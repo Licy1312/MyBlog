@@ -45,7 +45,7 @@
             <span class="btn btn-danger"></span>
         </div>
     </div><!-- /.sidebar-shortcuts -->
-
+    <div style="width: auto;height: 580px;overflow-y:auto;overflow-x:hidden;">
     <ul class="nav nav-list menu">
         <li class="active">
             <a href="#">
@@ -54,160 +54,164 @@
             </a>
             <b class="arrow"></b>
         </li>
-        <!--笔记本-->
-        <li class="">
-            <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-list"></i>
-                <span class="menu-text"> 笔记本 </span>
+        <%--<div style="width: auto;height: 620px;overflow-y:auto;overflow-x:hidden;">--%>
+            <!--笔记本-->
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-list"></i>
+                    <span class="menu-text"> 笔记本 </span>
 
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
 
-            <b class="arrow"></b>
+                <b class="arrow"></b>
 
-            <ul class="submenu">
-            <c:forEach items="${notes}" var="note" varStatus="vs">
-                <li class="">
-                    <a href="${pageContext.request.contextPath}/manager/menu/${note.note_id}">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        ${note.note_name}
-                        (${note.num})
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-            </c:forEach>
-            </ul>
-        </li>
-        <!--留言板-->
-        <li class="">
-            <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-pencil-square-o"></i>
-                <span class="menu-text"> 留言板 </span>
+                <ul class="submenu">
+                    <c:forEach items="${notes}" var="note" varStatus="vs">
+                        <li class="">
+                            <a href="${pageContext.request.contextPath}/manager/menu/${note.note_id}">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                    ${note.note_name}
+                                (${note.num})
+                            </a>
+                            <b class="arrow"></b>
+                        </li>
+                    </c:forEach>
+                </ul>
+            </li>
+            <!--留言板-->
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-pencil-square-o"></i>
+                    <span class="menu-text"> 留言板 </span>
 
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
 
-            <b class="arrow"></b>
+                <b class="arrow"></b>
 
-            <ul class="submenu">
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        最近三天
-                    </a>
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            最近三天
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        最近一周
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            最近一周
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        最近一月
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            最近一月
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        最近一年
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            最近一年
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        更早之前
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            更早之前
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
-            </ul>
-        </li>
-        <!--音乐库-->
-        <li class="">
-            <a href="#">
-                <i class="menu-icon fa fa-list-alt"></i>
-                <span class="menu-text"> 音乐库 </span>
-            </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <!--音乐库-->
+            <li class="">
+                <a href="#">
+                    <i class="menu-icon fa fa-list-alt"></i>
+                    <span class="menu-text"> 音乐库 </span>
+                </a>
 
-            <b class="arrow"></b>
-        </li>
-        <!--图片库-->
-        <li class="">
-            <a href="#">
-                <i class="menu-icon fa fa-picture-o"></i>
-                <span class="menu-text">图片库 </span>
-            </a>
+                <b class="arrow"></b>
+            </li>
+            <!--图片库-->
+            <li class="">
+                <a href="#">
+                    <i class="menu-icon fa fa-picture-o"></i>
+                    <span class="menu-text">图片库 </span>
+                </a>
 
-            <b class="arrow"></b>
-        </li>
-        <!--系统设置-->
-        <li class="">
-            <a href="#" class="dropdown-toggle">
-                <i class="menu-icon fa fa-tag"></i>
-                <span class="menu-text"> 系统设置</span>
+                <b class="arrow"></b>
+            </li>
+            <!--系统设置-->
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-tag"></i>
+                    <span class="menu-text"> 系统设置</span>
 
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
 
-            <b class="arrow"></b>
+                <b class="arrow"></b>
 
-            <ul class="submenu">
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        编辑名片
-                    </a>
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            编辑名片
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        后台用户
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            后台用户
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="#">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        添加用户
-                    </a>
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            添加用户
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
+                        <b class="arrow"></b>
+                    </li>
 
-                <li class="">
-                    <a href="invoice.html">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        我的信息
-                    </a>
+                    <li class="">
+                        <a href="invoice.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            我的信息
+                        </a>
 
-                    <b class="arrow"></b>
-                </li>
-            </ul>
-        </li>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+        <%--</div>--%>
+
     </ul>
 
     <!-- 伸缩 -->
     <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
         <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div>
     </div>
     <!--添加笔记本弹出框-->
     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">

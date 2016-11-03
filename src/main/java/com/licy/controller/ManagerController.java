@@ -1,5 +1,7 @@
 package com.licy.controller;
 
+import com.licy.model.Accounts;
+import com.licy.model.Notes;
 import com.licy.service.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +19,7 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -39,6 +42,11 @@ public class ManagerController {
         model.addAttribute("notes",managerService.getAll());
         return "manager/home";
     }
+    @ResponseBody
+    @RequestMapping("/menus")
+    public List<Notes> getMenus(){
+        return managerService.getAll();
+    }
     @RequestMapping("/saveMenu")
     public String saveMenu(String noteName){
         managerService.save(noteName);
@@ -51,14 +59,14 @@ public class ManagerController {
     }
     @ResponseBody
     @RequestMapping("/saveNote")
-    public String saveNote(String note_id,String title,String content){
-        System.out.println(note_id+title+content);
-        return "success";
+    public String saveNote(int note_id,String title,String content){
+        if(managerService.saveArticle(note_id,title,content))
+            return "success";
+        return "defeat";
     }
     @RequestMapping("/upload")
     public void upload (@RequestParam("fileName") CommonsMultipartFile file, HttpServletRequest request, HttpServletResponse response){
             String fileName = file.getOriginalFilename();
-            System.out.println("fileName---------->" + file.getOriginalFilename());
         try {
             file.transferTo(new File(uploadPath+fileName));
             // 图片存放的真实路径

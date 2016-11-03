@@ -27,12 +27,14 @@ public class Articles {
     public Articles(int d_id, String d_title, String d_content) {
         this.d_id = d_id;
         this.d_title = d_title;
-        d_content = d_content;
+        this.d_content = d_content;
     }
 
-    public Articles(String d_title, String d_content) {
+    public Articles(Timestamp create_time,String d_title, String d_content,int note_id) {
+        this.create_time =create_time;
         this.d_title = d_title;
-        d_content = d_content;
+        this.d_content = d_content;
+        this.note_id = note_id;
     }
     public Articles(){
     }
