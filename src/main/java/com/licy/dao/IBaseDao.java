@@ -2,11 +2,7 @@ package com.licy.dao;
 
 import java.util.List;
 
-/**
- * ������DAO���������������а�����Hibernate�����л��������Ͷ�SQL�Ĳ���
- * @author Administrator
- * @param <T>
- */
+
 public interface IBaseDao<T> {
 	/**
 	 * ��Ӷ���
@@ -33,5 +29,6 @@ public interface IBaseDao<T> {
 
 	public List<T> get(String hql);
 
+	public List<T> getPage(String hql);
 }
 

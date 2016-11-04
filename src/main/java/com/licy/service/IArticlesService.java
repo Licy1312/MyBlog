@@ -2,6 +2,8 @@ package com.licy.service;
 
 import com.licy.model.Articles;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/5/7 0007.
  */
@@ -14,4 +16,6 @@ public interface IArticlesService {
     public void addArticle(Articles article);
     //更新一篇文章
     public void updaterticle(Articles article);
+    //获得前5条
+    public List<Articles> getProArticle();
 }

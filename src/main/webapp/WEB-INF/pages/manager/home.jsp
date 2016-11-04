@@ -74,6 +74,7 @@
     </script>
     <script type="text/javascript">
         var c_text;
+        var abstract;
         var editor = new wangEditor('div1');
         $(function () {
             // 上传图片
@@ -82,11 +83,13 @@
             editor.create();
         });
         $("#commit").click(function(){
+            abstract = editor.$txt.formatText();
             c_text =editor.$txt.html();
             var noteId = $("#form-field-select-1").val().trim();
             var title = $("#title").val().trim();
             var url ="${pageContext.request.contextPath}/manager/saveNote";
-            var args = {"note_id":noteId,"title":title,"content":c_text};
+            var args = {"note_id":noteId,"title":title,"abs_text":abstract,"content":c_text};
+            alert(abstract);
             $.post(url,args,function(data){
                 if(data=="success"){
                     alert("保存成功！")

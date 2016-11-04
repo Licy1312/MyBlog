@@ -28,14 +28,10 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return sessionFactory.getCurrentSession();
 	}
 
-	/**
-	 * ����һ��Class�Ķ�������ȡ���͵�class
-	 */
 	private Class<?> clz;
 
 	public Class<?> getClz() {
 		if (clz == null) {
-			//��ȡ���͵�Class����
 			clz = ((Class<?>)
 					(((ParameterizedType) (this.getClass().getGenericSuperclass())).getActualTypeArguments()[0]));
 		}
@@ -69,9 +65,15 @@ public class BaseDao<T> implements IBaseDao<T> {
 		return query.list();
 	}
 
-	/* 
-	 * ����ҳ�Ĳ�ѯ
-	 * ����sql���Ͳ�ѯ����������һ�ж���
+	@Override
+	public List<T> getPage(String sql) {
+		Query query = getSession().createQuery(sql);
+		query.setFirstResult(0);
+		query.setMaxResults(5);
+		return query.list();
+	}
+
+	/*
 	 */
 	public List<T> list(String hql, Object[] args) {
 		return this.list(hql, args, null);

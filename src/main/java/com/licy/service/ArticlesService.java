@@ -5,6 +5,8 @@ import com.licy.model.Articles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/5/7 0007.
  */
@@ -26,9 +28,13 @@ public class ArticlesService implements IArticlesService {
     public void addArticle(Articles article) {
 
     }
-
     @Override
     public void updaterticle(Articles article) {
 
+    }
+
+    @Override
+    public List<Articles> getProArticle() {
+        return articlesDao.getProArticle();
     }
 }

@@ -10,9 +10,16 @@ import java.util.List;
  */
 @Repository("articlesDao")
 public class ArticlesDao extends BaseDao<Articles> implements IArticlesDao {
+
     @Override
     public List<Articles> getNoteById(int id) {
         String hql = "SELECT a.d_id,a.d_title,a.d_content,a.create_time From Articles a where a.note_id="+id;
         return this.get(hql);
+    }
+
+    @Override
+    public List<Articles> getProArticle() {
+        String hql = "SELECT a.d_id,a.d_title,a.d_abstract,a.d_content,a.create_time From Articles a";
+        return this.getPage(hql);
     }
 }

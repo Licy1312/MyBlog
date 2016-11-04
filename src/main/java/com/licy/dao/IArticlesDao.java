@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface IArticlesDao extends IBaseDao<Articles> {
     public List<Articles> getNoteById(int id);
+    public List<Articles> getProArticle();
 }

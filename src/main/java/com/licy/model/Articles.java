@@ -23,6 +23,7 @@ public class Articles {
     private Timestamp create_time;
     private Timestamp update_time;
     private int note_id;
+    private int hits;
 
     public Articles(int d_id, String d_title, String d_content) {
         this.d_id = d_id;
@@ -30,9 +31,10 @@ public class Articles {
         this.d_content = d_content;
     }
 
-    public Articles(Timestamp create_time,String d_title, String d_content,int note_id) {
+    public Articles(Timestamp create_time,String d_title, String d_abstract,String d_content,int note_id) {
         this.create_time =create_time;
         this.d_title = d_title;
+        this.d_abstract = d_abstract;
         this.d_content = d_content;
         this.note_id = note_id;
     }
@@ -126,5 +128,13 @@ public class Articles {
 
     public void setNote_id(int note_id) {
         this.note_id = note_id;
+    }
+
+    public int getHits() {
+        return hits;
+    }
+
+    public void setHits(int hits) {
+        this.hits = hits;
     }
 }

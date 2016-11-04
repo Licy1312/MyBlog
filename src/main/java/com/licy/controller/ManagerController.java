@@ -59,8 +59,8 @@ public class ManagerController {
     }
     @ResponseBody
     @RequestMapping("/saveNote")
-    public String saveNote(int note_id,String title,String content){
-        if(managerService.saveArticle(note_id,title,content))
+    public String saveNote(int note_id,String title,String abs_text,String content){
+        if(managerService.saveArticle(note_id,title,abs_text,content))
             return "success";
         return "defeat";
     }
@@ -71,17 +71,12 @@ public class ManagerController {
             file.transferTo(new File(uploadPath+fileName));
             // 图片存放的真实路径
             String realPath = request.getServletContext().getRealPath("/upload") + "/" + fileName;
-
             // 返回图片的URL地址
-           // request.getScheme()+":"+request.get
-            //${ctx_upload}
             String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/upload/";
             response.getWriter().write(basePath + fileName);
-         //   response.getWriter().write(uploadPath+fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
     @RequestMapping("/editNote")
     public String editNote(){

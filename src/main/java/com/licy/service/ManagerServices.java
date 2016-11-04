@@ -48,9 +48,9 @@ public class ManagerServices implements IManagerService {
     }
 
     @Override
-    public boolean saveArticle(int note_id, String title, String content) {
+    public boolean saveArticle(int note_id, String title,String abs_text, String content) {
         //首先保存文字
-        Articles article =  new Articles(new Timestamp(new Date().getTime()),title,content,note_id);
+        Articles article =  new Articles(new Timestamp(new Date().getTime()),title,abs_text,content,note_id);
         articlesDao.add(article);
         //更新目录表对应的记录
         if(notesDao.update(note_id)>0)

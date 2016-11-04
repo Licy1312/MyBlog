@@ -14,5 +14,5 @@ public interface IManagerService {
     public void save(String noteName);
     public List<Notes> getAll();
     public List<Articles> getByNoteId(int id);
-    public boolean saveArticle(int note_id,String title,String content);
+    public boolean saveArticle(int note_id,String title,String abs_text,String content);
 }
