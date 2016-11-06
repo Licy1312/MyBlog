@@ -150,8 +150,8 @@ a:hover {
     overflow: hidden;
 }
 .arrow_box img {
-    width: 150px;
-    padding: 4px;
+    width: 100px;
+    height: 95px;
     float: left;
     -webkit-transition: All 1s ease;
     -moz-transition: All 1s ease;
@@ -163,6 +163,9 @@ a:hover {
 .arrow_box p {
     line-height: 24px;
     padding: 0 20px 20px;
+    color: #C8CFD6;
+    height: 90px;
+    overflow: hidden;
 }
 .details {
     background: rgba(1,1,1,0.3);
@@ -216,11 +219,11 @@ aside div {
 .tuijian li:first-child span {
     color: #f8490b;
 }
-.tuijian li:nth-child(-n+3) span {
+.tuijian li:nth-child(-n+3) span,.clicks  li:nth-child(-n+3) span{
     width: 39px;
     color: #999;
 }
-.tuijian li span {
+.tuijian li span,.clicks li span{
     margin-right: 10px;
     font-size: 14px;
     font-family: "微软雅黑";
@@ -229,7 +232,11 @@ aside div {
     display: block;
     width: 100%;
     clear: both;
+    line-height: 20px;
     overflow: hidden;
+}
+.toppic ul li a:hover{
+    text-decoration: none;
 }
 aside h2{
     font-size: 16px;

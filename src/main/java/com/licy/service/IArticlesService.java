@@ -16,6 +16,12 @@ public interface IArticlesService {
     public void addArticle(Articles article);
     //更新一篇文章
     public void updaterticle(Articles article);
-    //获得前5条
+    //获得所有记录
+    public List<Articles> getAllArticle();
+    //获得最近更新前10条
     public List<Articles> getProArticle();
+    //获得最近添加前5条
+    public List<Articles> getRecentInsert();
+    //获得最近添加前10条
+    public List<Articles> gethits();
 }

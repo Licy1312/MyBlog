@@ -4,10 +4,12 @@ import com.licy.dao.IArticlesDao;
 import com.licy.dao.INotesDao;
 import com.licy.model.Articles;
 import com.licy.model.Notes;
+import com.licy.tool.Menu;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -42,9 +44,29 @@ public class ManagerServices implements IManagerService {
     public List<Notes> getAll(){
         return notesDao.getAll();
     }
+
+    @Override
+    public List<Notes> getTenOrder() {
+        return notesDao.getTenOrder();
+    }
     @Override
     public List<Articles> getByNoteId(int id){
         return articlesDao.getNoteById(id);
+    }
+    /*获取目录和文章的一个对应关系*/
+    @Override
+    public List<Menu> getMenu() {
+        List<Menu> result = new ArrayList<Menu>();
+        //获取所有目录
+        List<Notes> list = getAll();
+        for(int i=0;i<list.size();i++){
+            Menu obj = new Menu(list.get(i).getNote_id(),list.get(i).getNote_name(),list.get(i).getNum());
+            if(list.get(i).getNum()>0){
+                obj.setList_article(getByNoteId(list.get(i).getNote_id()));
+            }
+            result.add(obj);
+        }
+        return result;
     }
 
     @Override

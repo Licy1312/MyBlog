@@ -9,5 +9,8 @@ import java.util.List;
  */
 public interface IArticlesDao extends IBaseDao<Articles> {
     public List<Articles> getNoteById(int id);
+    public List<Articles> getAllArticle();
     public List<Articles> getProArticle();
+    public List<Articles> getRecentFive();
+    public List<Articles> getHitsTen();
 }

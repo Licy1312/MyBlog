@@ -66,10 +66,14 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	@Override
-	public List<T> getPage(String sql) {
-		Query query = getSession().createQuery(sql);
-		query.setFirstResult(0);
-		query.setMaxResults(5);
+	public List<T> getPage(String hql,int start,int end) {
+		Query query = getSession().createQuery(hql);
+		query.setFirstResult(start);
+		query.setMaxResults(end);
+		return query.list();
+	}
+	public List<T> getRecentOrder(String sql){
+		Query query = getSession().createSQLQuery(sql);
 		return query.list();
 	}
 
@@ -90,7 +94,6 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	/**
-	 * ��ʱ����Ҫͨ���������в�ѯ���磺
 	 * Select role from Role where role.user.id in(:ids) and username = :username and nickname=?
 	 * @param hql
 	 * @param args
@@ -103,8 +106,8 @@ public class BaseDao<T> implements IBaseDao<T> {
 		setParameter(query, args);
 		return query.list();
 	}
-	//���ڱ���������ֵ
-	@SuppressWarnings("rawtypes")
+
+
 	private void setAliasParameter(Query query, Map<String, Object> alias) {
 		if (alias != null) {
 			Set<String> keys = alias.keySet();

@@ -1,5 +1,7 @@
 package com.licy.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,8 +13,9 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name ="articles")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Articles {
-    private int d_id;
+    private Integer d_id;
     private int d_type;
     private String d_title;
     private String d_abstract;
@@ -42,11 +45,11 @@ public class Articles {
     }
     @Id
     @GeneratedValue
-    public int getD_id() {
+    public Integer getD_id() {
         return d_id;
     }
 
-    public void setD_id(int d_id) {
+    public void setD_id(Integer d_id) {
         this.d_id = d_id;
     }
 

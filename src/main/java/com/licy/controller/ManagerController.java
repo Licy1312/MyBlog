@@ -71,6 +71,7 @@ public class ManagerController {
             file.transferTo(new File(uploadPath+fileName));
             // 图片存放的真实路径
             String realPath = request.getServletContext().getRealPath("/upload") + "/" + fileName;
+
             // 返回图片的URL地址
             String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/upload/";
             response.getWriter().write(basePath + fileName);

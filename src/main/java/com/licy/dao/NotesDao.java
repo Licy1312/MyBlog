@@ -38,6 +38,13 @@ public class NotesDao extends BaseDao<Notes> implements INotesDao {
         String hql = "From Notes";
         return this.get(hql);
     }
+
+    @Override
+    public List<Notes> getTenOrder() {
+        String hql = "From Notes";
+        return this.getPage(hql,0,10);
+    }
+
     @Override
     public int update(int note_id) {
 //        String hql = "UPDATE  Notes set Notes.num WHERE note_id="+note_id;

@@ -18,12 +18,11 @@ public class ArticlesService implements IArticlesService {
     public Articles getArticle() {
         return null;
     }
-
+    /*根据id获取详细记录*/
     @Override
     public Articles getArticleById(int id) {
-        return null;
+        return articlesDao.load(id);
     }
-
     @Override
     public void addArticle(Articles article) {
 
@@ -34,7 +33,22 @@ public class ArticlesService implements IArticlesService {
     }
 
     @Override
+    public List<Articles> getAllArticle() {
+        return articlesDao.getAllArticle();
+    }
+
+    @Override
     public List<Articles> getProArticle() {
         return articlesDao.getProArticle();
+    }
+
+    @Override
+    public List<Articles> getRecentInsert() {
+        return articlesDao.getRecentFive();
+    }
+
+    @Override
+    public List<Articles> gethits() {
+        return articlesDao.getHitsTen();
     }
 }
