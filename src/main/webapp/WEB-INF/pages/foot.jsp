@@ -39,12 +39,11 @@
     });
   })
 </script>
-<div class="footer_bg" id="contact"><!-- start footer -->
+<div class="footer_bg" id="contact" style="height: 300px;"><!-- start footer -->
   <div class="container">
     <div class="row footer">
       <div class="col-md-8 contact_left">
         <h3>给我留言</h3>
-        <h4>You can leave a message in below:</h4>
         <form id="messageForm">
           <input id ="Mtitle" type="text" name="title">
           <textarea id ="Mcontent" name="content"></textarea>
@@ -64,7 +63,7 @@
     </div>
   </div>
 </div>
-<div class="footer1_bg"><!-- start footer1 -->
+<div class="footer1_bg" style="height: 50px;"><!-- start footer1 -->
   <div class="container">
     <div class="row  footer">
       <div class="copy text-center">

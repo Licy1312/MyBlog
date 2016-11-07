@@ -51,4 +51,9 @@ public class ArticlesService implements IArticlesService {
     public List<Articles> gethits() {
         return articlesDao.getHitsTen();
     }
+
+    @Override
+    public Articles getRecentNew() {
+        return articlesDao.getHitsTen().get(0);
+    }
 }

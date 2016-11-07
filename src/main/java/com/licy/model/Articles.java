@@ -90,7 +90,7 @@ public class Articles {
     }
 
     public void setD_topics(String d_topics) {
-        d_topics = d_topics;
+        this.d_topics = d_topics;
     }
 
     public String getD_content() {
@@ -98,7 +98,7 @@ public class Articles {
     }
 
     public void setD_content(String d_content) {
-        d_content = d_content;
+        this.d_content = d_content;
     }
 
     public String getD_resources() {
@@ -106,7 +106,7 @@ public class Articles {
     }
 
     public void setD_resources(String d_resources) {
-        d_resources = d_resources;
+        this.d_resources = d_resources;
     }
 
     public Timestamp getCreate_time() {

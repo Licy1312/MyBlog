@@ -27,7 +27,7 @@
     <title>我的笔记</title>
     <style type="text/css">
         .detail img{border:none;}
-        *{font-family:'微软雅黑';font-size:12px;color:#626262;}
+        *{font-family:'微软雅黑';font-size:12px;}
         dl,dt,dd{display:block;margin:0;}
         .detail a{text-decoration:none;    display: block;
             overflow: hidden;
@@ -36,7 +36,7 @@
             text-overflow: ellipsis;}
 
         #bg{background-image:url(${pageContext.request.contextPath}/resources/images/content/dotted.png);}
-        .detail{width:76%;height:100%;margin:40px auto 30px auto;-moz-border-radius: 15px;
+        .detail{width:76%;height:100%;margin:40px auto 20px auto;-moz-border-radius: 15px;
             -webkit-border-radius: 15px;
             border-radius: 15px;}
 
@@ -51,7 +51,7 @@
             background: rgb(76, 76, 76);}
         .leftsidebar_box dt{padding-left:30px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#42a3f7;font-size:12px;position:relative;line-height:48px;cursor:pointer;}
         .leftsidebar_box dd{padding-left:45px;}
-        .leftsidebar_box dd a{color:#42a3f7;line-height:20px;}
+        .leftsidebar_box dd a{color:#f2f4f7;line-height:20px;}
         .leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
         .leftsidebar_box dl dd:last-child{padding-bottom:10px;}
         ::-webkit-scrollbar {
@@ -67,128 +67,107 @@
 
         <div class="leftsidebar_box" id="menus">
 
-
-
             <div style="height: 8px;"></div>
-            <%--<dl>--%>
-                <%--<dt>系统记录<img src="${pageContext.request.contextPath}/resources/images/left/select_xl01.png"></dt>--%>
-                <%--<dd><a href="#">充值记录</a></dd>--%>
-                <%--<dd><a href="#">短信充值记录</a></dd>--%>
-                <%--<dd><a href="#">消费记录</a></dd>--%>
-                <%--<dd><a href="#">操作记录</a></dd>--%>
-            <%--</dl>--%>
-
-            <%--<dl >--%>
-                <%--<dt >客户管理<img src="${pageContext.request.contextPath}/resources/images/left/select_xl01.png"></dt>--%>
-                <%--<dd ><a href="#">客户管理</a></dd>--%>
-                <%--<dd><a href="#">试用/成交客户管理</a></dd>--%>
-                <%--<dd><a href="#">未成交客户管理</a></dd>--%>
-                <%--<dd><a href="#">即将到期客户管理</a></dd>--%>
-            <%--</dl>--%>
-
-            <%--<dl >--%>
-                <%--<dt>渠道管理<img src="${pageContext.request.contextPath}/resources/images/left/select_xl01.png"></dt>--%>
-                <%--<dd><a href="#">渠道标准管理</a></dd>--%>
-                <%--<dd><a href="#">系统通知</a></dd>--%>
-                <%--<dd><a href="#">渠道商管理</a></dd>--%>
-                <%--<dd><a href="#">渠道商链接</a></dd>--%>
-
-            <%--</dl>--%>
-
-
-
-
 
         </div>
-        <div clss ="right_content" style="width: 79%; height: 100%;float: right;background-color: antiquewhite;min-height: 300px;max-height: 100%; -moz-border-radius: 15px;
+        <div clss ="right_content" style="width: 79%;float: right;background-color: #dedddb;min-height: 300px;max-height: 100%; -moz-border-radius: 15px;
             -webkit-border-radius: 15px;
-            border-radius: 15px;
-            background: rgb(76, 76, 76);">
+            border-radius: 15px;">
             <!--标题-->
-            <div>
-
+            <div style="margin-left: 20px;">
+                <h3 id="a_title"></h3> <span id="a_time" style="float: right;
+    margin-right: 30px;"></span>
             </div>
             <!--内容-->
-            <div>
-
+            <div id="a_content" style="width: 96%;height: 82%;overflow-y:auto;margin: 10px 0px 10px 20px;">
             </div>
         </div>
     </div>
-    <!--foot-->
-    <div class="footer1_bg">
-        <div class="container">
-            <div class="row  footer">
-                <div class="copy text-center">
-                    <p class="link"><span>Copyright &copy; 2016. This's my world. Welcome to you.</span></p>
-                    <a href="#home" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
-                </div>
-            </div>
-            <script type="text/javascript">
-                $(function() {
-                    $('a[href*=#]:not([href=#])').click(function() {
-                        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-                            var target = $(this.hash);
-                            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                            if (target.length) {
-                                $('html,body').animate({
-                                    scrollTop: target.offset().top
-                                }, 1000);
-                                return false;
-                            }
-                        }
-                    });
-                });
-            </script>
-            <!---- start-smoth-scrolling---->
-        </div>
-    </div>
+    <!--  foot -->
+    <jsp:include page="foot.jsp"></jsp:include>
     <script type="text/javascript">
+        $(function(){
+            var url = location.href;
+            var index = url .lastIndexOf("\/");
+            url  = url .substring(index + 1, url.length);
+            var reg = new RegExp("^[0-9]*$");
+            if(reg.test(url)){
+                getDetail(url);
+            }else{
+                getNewArticle();
+            }
+        });
         window.onload = function () {
-            //最近发布的5条数据
+            //加载菜单导航栏
             var url = "${pageContext.request.contextPath}/allMenus";
             $.post(url,function(data){
                 for(var i=0;i<data.length;i++){
                     createMenus(data[i]);
                 }
+                initEvent();
             });
+
         }
         //目录
         function  createMenus(data){
             var html = '<dl>'+
-                '<dt>'+data.m_name+'('+data.m_num+')'+'<img src="${pageContext.request.contextPath}/resources/images/left/select_xl01.png"></dt>'+
-            '</dl>';
+                '<dt>'+data.m_name+'('+data.m_num+')'+'<img src="${pageContext.request.contextPath}/resources/images/left/select_xl01.png"></dt>';
+            if(data.list_article!=null){
+                html +=createTitle(data.list_article);
+            }
+            html+='</dl>';
             $(html).appendTo('#menus');
         }
         //目录
         function  createTitle(list){
-            var html;
-            if(list!=null){
-                for(var i=0;i<list.length;i++){
-                    html += ' <dd ><a href="#">'+list[i].d_title+'</a></dd>';
-                }
-            }else{
-                html='';
+            var html="";
+            for(var i=0;i<list.length;i++){
+                html += '<dd ><a href="#"onclick="getDetail('+list[i].d_id+')" title="'+list[i].d_title+'">'+list[i].d_title+'</a></dd>';
             }
             return html;
         }
-    </script>
-    <script type="text/javascript">
-        $(".leftsidebar_box dt").css({});
-        $(".leftsidebar_box dt img").attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl01.png");
-        $(function(){
-            $(".leftsidebar_box dd").hide();
-            $(".leftsidebar_box dt").click(function(){
-                $(".leftsidebar_box dt").css({})
-                $(this).css({});
-                $(this).parent().find('dd').removeClass("menu_chioce");
-                $(".leftsidebar_box dt img").attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl01.png");
-                $(this).parent().find('img').attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl.png");
-                $(".menu_chioce").slideUp();
-                $(this).parent().find('dd').slideToggle();
-                $(this).parent().find('dd').addClass("menu_chioce");
+        //获取最新的一条数据
+        function getNewArticle(){
+            var h2_title = document.getElementById("a_title");
+            var sp_time = document.getElementById("a_time");
+            var div_content = document.getElementById("a_content");
+            var url = "${pageContext.request.contextPath}/newOrder";
+            $.post(url,function(data){
+                h2_title.innerHTML = data.d_title;
+                sp_time.innerHTML = timeStamp2String(data.create_time);
+                div_content.innerHTML=data.d_content;
             });
-        })
+        }
+        //获取具体的数据并显示的页面上
+        function getDetail(id){
+            var h2_title = document.getElementById("a_title");
+            var sp_time = document.getElementById("a_time");
+            var div_content = document.getElementById("a_content");
+            var url = "${pageContext.request.contextPath}/order/"+id;
+            $.post(url,function(data){
+                h2_title.innerHTML = data.d_title;
+                sp_time.innerHTML = timeStamp2String(data.create_time);
+                div_content.innerHTML=data.d_content;
+            });
+        }
+
+    </script>
+    <script>
+        function initEvent(){
+            $(".leftsidebar_box dd").hide();
+            $(".leftsidebar_box dt img").attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl01.png");
+            $(function(){
+                $(".leftsidebar_box dd").hide();
+                $(".leftsidebar_box dt").click(function(){
+                    $(this).parent().find('dd').removeClass("menu_chioce");
+                    $(".leftsidebar_box dt img").attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl01.png");
+                    $(this).parent().find('img').attr("src","${pageContext.request.contextPath}/resources/images/left/select_xl.png");
+                    $(".menu_chioce").slideUp();
+                    $(this).parent().find('dd').slideToggle();
+                    $(this).parent().find('dd').addClass("menu_chioce");
+                });
+            });
+        }
     </script>
 </body>
 </html>

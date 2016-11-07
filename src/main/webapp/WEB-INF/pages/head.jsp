@@ -2,14 +2,14 @@
 <div class="header_bg" id="home">
   <div class="container">
     <div class="row header text-center specials">
-      <div class="h_logo">
-        <a href="index.html"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a>
-      </div>
+      <%--<div class="h_logo">--%>
+        <%--<a href="index.html" title="首页"><img src="${pageContext.request.contextPath}/resources/images/logo.png"  class="responsive"/></a>--%>
+      <%--</div>--%>
       <nav class="top-nav">
         <ul class="top-nav nav_list">
-          <li><a href="${pageContext.request.contextPath}/essays">笔记本</a></li>
-          <li class="page-scroll"><a href="#music">音乐盒</a></li>
-          <li class="logo page-scroll"><a  href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a></li>
+          <li><a href="${pageContext.request.contextPath}/detail">笔记本</a></li>
+          <li class="page-scroll"><a href="${pageContext.request.contextPath}/#music">音乐盒</a></li>
+          <li class="logo page-scroll"><a  href="${pageContext.request.contextPath}/" title="首页"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="" class="responsive"/></a></li>
           <li class="page-scroll"><a href="#contact">留言板</a></li>
           <li class="page-scroll"><a href="${pageContext.request.contextPath}/me">关于我</a></li>
         </ul>

@@ -24,4 +24,6 @@ public interface IArticlesService {
     public List<Articles> getRecentInsert();
     //获得最近添加前10条
     public List<Articles> gethits();
+    //获得最新的1条
+    public Articles getRecentNew();
 }

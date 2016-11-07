@@ -30,7 +30,9 @@
   <div class="container">
       <!--我的名片-->
       <div class="info" >
-        <figure > <img src="${pageContext.request.contextPath}/resources/images/home.jpg"  alt="Panama Hat">
+        <figure > <img src="${pageContext.request.contextPath}/resources/images/home.jpg" style="-moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 10px;" alt="欢迎您访问！">
         </figure>
         <div class="card">
           <h1>我的名片</h1>
@@ -40,9 +42,9 @@
           <p>Email：licy1312@163.com</p>
           <ul class="intro">
             <li><a href="#contact" class="talk" title="给我留言"></a></li>
-            <li><a href="/" class="addresses" title="联系地址"></a></li>
-            <li><a href="/" class="email" title="留言板"></a></li>
-            <li><a href="/" class="heart" title="关注我"></a></li>
+            <li><a href="${pageContext.request.contextPath}/" class="addresses" title="个人中心"></a></li>
+            <li><a href="${pageContext.request.contextPath}/" class="email" title="留言板"></a></li>
+            <li><a href="${pageContext.request.contextPath}/" class="heart" title="关注我"></a></li>
           </ul>
         </div>
       </div>
@@ -61,19 +63,19 @@
           </div>
           <!--最近更新-->
           <div class="tuijian">
-            <h2>最近更新</h2><a href="#" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
+            <h2>最近更新</h2><a href="${pageContext.request.contextPath}/detail" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
             <ol id="recently">
             </ol>
           </div>
           <!--文章目录-->
           <div class="toppic">
-              <h2>文章目录</h2> <a href="#" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
+              <h2>文章目录</h2> <a href="${pageContext.request.contextPath}/detail" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
             <ul id="menu">
             </ul>
           </div>
           <!--点击排行榜-->
           <div class="clicks">
-            <h2>热门点击</h2><a href="#" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
+            <h2>热门点击</h2><a href="${pageContext.request.contextPath}/detail" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
             <ol id="hits">
             </ol>
           </div>
@@ -173,7 +175,7 @@
         <!--三角形-->
         '<div class="ci"></div>'+
         <!--圆形-->
-        '<h2 class="title"><a href="#" target="_blank">'+data.d_title+'</a></h2>'+
+        '<h2 class="title"><a href="${pageContext.request.contextPath}/detail/'+data.d_id+'" target="_blank">'+data.d_title+'</a></h2>'+
         '<ul class="textinfo">'+
           '<a href="/"><img src="${pageContext.request.contextPath}/resources/images/'+getImageUrl(num)+'"></a>'+
           '<p>'+ data.d_abstract+'</p>'+
@@ -189,7 +191,7 @@
   };
   //目录
   function  createMenu(data){
-    var html = '<li><a href="#">'+
+    var html = '<li><a href="${pageContext.request.contextPath}/detail">'+
             '&nbsp;'+data.note_name+'('+data.num+')'+
     '</a></li>';
     $(html).appendTo('#menu');
@@ -197,27 +199,16 @@
   //最近更新的记录
   function createUpdate(data,num){
     var html = '<li><span><strong>'+num+
-            '</strong></span><a href="#">'+data.d_title+'</a></li>';
+            '</strong></span><a href="${pageContext.request.contextPath}/detail/'+data.d_id+'">'+data.d_title+'</a></li>';
     $(html).appendTo('#recently');
   }
   //点击率排行榜
   function createHits(data,num){
     var html = '<li><span><strong>'+num+
-            '</strong></span><a href="#">'+data.d_title+'</a></li>';
+            '</strong></span><a href="${pageContext.request.contextPath}/detail/'+data.d_id+'">'+data.d_title+'</a></li>';
     $(html).appendTo('#hits');
   }
-  //将timeStamp转化成dateTime
-  function timeStamp2String (time){
-    var datetime = new Date();
-    datetime.setTime(time);
-    var year = datetime.getFullYear();
-    var month = datetime.getMonth() + 1;
-    var date = datetime.getDate();
-    var hour = datetime.getHours();
-    var minute = datetime.getMinutes();
-    var second = datetime.getSeconds();
-    return year + "-" + month + "-" + date+" "+hour+":"+minute+":"+second;
-  };
+
   function getImageUrl(temp){
     switch (temp){
       case 1:return "1.jpg";

@@ -30,6 +30,10 @@ public class ArticlesController {
     public String toArticle(){
         return "detail";
     }
+    @RequestMapping("/detail/{id}")
+    public String toDeatilArticle(){
+        return "detail";
+    }
     @ResponseBody
     @RequestMapping("/orders")
     public List<Articles> getAllAritcle(){
@@ -82,5 +86,11 @@ public class ArticlesController {
     @RequestMapping("/menuArticle/{id}")
     public List<Articles> getMenuArticle(@PathVariable("id") int id){
         return managerService.getByNoteId(id);
+    }
+    /*给笔记本页面提供最新的1条记录*/
+    @ResponseBody
+    @RequestMapping("/newOrder")
+    public Articles getNewAritcle(){
+        return articlesService.getRecentNew();
     }
 }

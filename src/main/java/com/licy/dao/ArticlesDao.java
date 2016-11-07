@@ -41,4 +41,5 @@ public class ArticlesDao extends BaseDao<Articles> implements IArticlesDao {
         String hql = "FROM Articles a ORDER BY a.hits DESC";
         return this.getPage(hql,0,9);
     }
+
 }

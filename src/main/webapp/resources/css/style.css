@@ -56,7 +56,7 @@ nav li  a {
 	text-decoration: none;
 	padding: 5px;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 16px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -68,19 +68,19 @@ nav a#pull {
 .specials {
 	position: relative;
 }
-.specials:after {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	border: 40px solid #fff;
-	border-bottom: 0 solid rgba(0, 0, 0, 0)!important;
-	border-right: 40px solid rgba(0, 0, 0, 0)!important;
-	border-left: 40px solid rgba(0, 0, 0, 0)!important;
-	left: 50%;
-	bottom: -40px;
-	margin-left: -45px;
-}
+/*.specials:after {*/
+	/*content: '';*/
+	/*position: absolute;*/
+	/*width: 0;*/
+	/*height: 0;*/
+	/*border: 40px solid #fff;*/
+	/*border-bottom: 0 solid rgba(0, 0, 0, 0)!important;*/
+	/*border-right: 40px solid rgba(0, 0, 0, 0)!important;*/
+	/*border-left: 40px solid rgba(0, 0, 0, 0)!important;*/
+	/*left: 50%;*/
+	/*bottom: -40px;*/
+	/*margin-left: -45px;*/
+/*}*/
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
 	nav { 
@@ -278,7 +278,7 @@ nav a#pull {
 	background: #353535;
 }
 .footer{
-	padding: 4%;
+	padding: 0.5% 4% 0% 4%;
 }
 .contact_left h3{
 	font-family: 'Kreon', serif;
@@ -313,7 +313,7 @@ nav a#pull {
 }
 .contact_left form textarea{
 	resize: none;
-	height: 160px;
+	height: 36%;;
 }
 .contact_left form input[type="text"]:focus,.contact_left form textarea:focus{
 	border: 1px solid #2EB398;	
@@ -322,7 +322,7 @@ nav a#pull {
 	border-color: #2EB398;
 }
 .contact_right {
-	margin-top: 8%;
+	margin-top: 3%;
 }
 .contact_right p{
 	color: #c9c9c9;
