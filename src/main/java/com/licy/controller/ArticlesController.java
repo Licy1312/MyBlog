@@ -31,7 +31,9 @@ public class ArticlesController {
         return "detail";
     }
     @RequestMapping("/detail/{id}")
-    public String toDeatilArticle(){
+    public String toDeatilArticle(@PathVariable("id") int id){
+        //更新笔记的点击率
+        articlesService.updateHits(id);
         return "detail";
     }
     @ResponseBody
@@ -61,7 +63,8 @@ public class ArticlesController {
     @RequestMapping("/order/{id}")
     public Articles getOneAritcle(@PathVariable("id") int id){
         Articles articles = articlesService.getArticleById(id);
-        System.out.println(articles.getCreate_time());
+        //更新笔记的点击率
+        articlesService.updateHits(id);
         return articles;
     }
     @ResponseBody

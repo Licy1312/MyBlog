@@ -41,5 +41,11 @@ public class ArticlesDao extends BaseDao<Articles> implements IArticlesDao {
         String hql = "FROM Articles a ORDER BY a.hits DESC";
         return this.getPage(hql,0,9);
     }
-
+    /*更新比记的点击率*/
+    @Override
+    public int updateHits(int id){
+        String sql ="update articles set hits=(hits+1) where d_id="+id;
+        Query query = getSession().createSQLQuery(sql);
+        return query.executeUpdate();
+    }
 }

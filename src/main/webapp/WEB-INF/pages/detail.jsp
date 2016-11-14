@@ -19,67 +19,29 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/common.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/detail.css">
 
     <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); }
     </script>
+
     <title>我的笔记</title>
-    <style type="text/css">
-        .detail img{border:none;}
-        *{font-family:'微软雅黑';font-size:12px;}
-        dl,dt,dd{display:block;margin:0;}
-        .detail a{text-decoration:none;    display: block;
-            overflow: hidden;
-            word-break: keep-all;
-            white-space: nowrap;
-            text-overflow: ellipsis;}
-
-        #bg{background-image:url(${pageContext.request.contextPath}/resources/images/content/dotted.png);}
-        .detail{width:76%;height:100%;margin:40px auto 20px auto;-moz-border-radius: 15px;
-            -webkit-border-radius: 15px;
-            border-radius: 15px;}
-
-        /*left*/
-
-        .leftsidebar_box{width:20%;overflow-x:auto;float: left;
-            overflow-y:auto;  min-height: 300px;max-height: 100%;
-            border: 1px solid #968f8f;
-            -moz-border-radius: 15px;
-            -webkit-border-radius: 15px;
-            border-radius: 15px;
-            background: rgb(76, 76, 76);}
-        .leftsidebar_box dt{padding-left:30px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#42a3f7;font-size:12px;position:relative;line-height:48px;cursor:pointer;}
-        .leftsidebar_box dd{padding-left:45px;}
-        .leftsidebar_box dd a{color:#f2f4f7;line-height:20px;}
-        .leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
-        .leftsidebar_box dl dd:last-child{padding-bottom:10px;}
-        ::-webkit-scrollbar {
-            width: 1em;
-            height: 1em;
-        }
-    </style>
 </head>
 <body>
     <!--header-->
     <jsp:include page="head.jsp"></jsp:include>
     <div class="detail">
-
         <div class="leftsidebar_box" id="menus">
-
             <div style="height: 8px;"></div>
-
         </div>
-        <div clss ="right_content" style="width: 79%;float: right;background-color: #dedddb;min-height: 300px;max-height: 100%; -moz-border-radius: 15px;
-            -webkit-border-radius: 15px;
-            border-radius: 15px;">
+        <div clss ="right_content" class="right_content">
             <!--标题-->
             <div style="margin-left: 20px;">
-                <h3 id="a_title"></h3> <span id="a_time" style="float: right;
-    margin-right: 30px;"></span>
+                <h3 id="a_title"></h3> <span id="a_time"class="a-time" ></span>
             </div>
             <!--内容-->
-            <div id="a_content" style="width: 96%;height: 82%;overflow-y:auto;margin: 10px 0px 10px 20px;">
+            <div id="a_content" class="a-content">
             </div>
         </div>
     </div>

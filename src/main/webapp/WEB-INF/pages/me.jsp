@@ -33,7 +33,7 @@
     <!--  header -->
     <jsp:include page="head.jsp"></jsp:include>
     <!--contain-->
-    <div class="about-me">
+    <div class="about-me" >
         <div class="main">
             <div class="account">
                 <div class="account-info">
@@ -57,6 +57,7 @@
                                 <a><span class="icon4"></span>个人评价</a>
                                 <a><span class="icon5"></span>荣誉奖励</a>
                             </nav>
+                            <!--基本信息-->
                             <div class="content">
                                 <div class="text" style=" height: 40%;">
                                     <div class="text-left">
@@ -64,7 +65,7 @@
                                     </div>
                                     <div class="text-right info-me1" style=" height: 99%;">
 
-                                        <p id ="year">2017届应届毕业生<br/>
+                                        <p id ="year">2017届应届硕士毕业生<br/>
                                            上海大学 计算机工程与科学学院 软件工程 </p>
                                     </div>
                                 </div>
@@ -91,209 +92,170 @@
                                 </div>
 
                             </div>
+                            <!--专业技能-->
                             <div class="content">
-                                <div class="text" style=" height: 60%;">
+                                <div class="text skilled1" >
                                     <div class="text-left">
                                         <span class="star active"> </span>
+                                        <p>个人专业技能：</p>
                                     </div>
-                                    <div class="text-right skilled" style=" height: 99%;">
+                                    <div class="text-right skilled skilled2">
 
-                                        <pre>熟练掌握JavaSE，熟练面向对象设计思想
-                                        熟练javaEE开发过程、熟悉TCP/UDP网络协议、java多线程编程
-                                        熟练对tomcat、maven、git、github、sourceTree等工具的使用
-                                        熟悉jsp、javascript、jquery、xml等技术
-                                        熟悉hibernate、spring、springmvc、Lucene、cxf等开源框架
-                                        熟悉MySQL、Mongodb的使用，以及MySQL的性能优化环节
-                                        熟悉Linux系统常用命令及shell简单编程
-                                        </pre>
-
+                                        <p>
+                                        熟练掌握JavaSE，熟练面向对象设计思想<br/>
+                                        熟练javaEE开发过程、熟悉TCP/UDP网络协议、java多线程编程<br/>
+                                        熟练对tomcat、maven、git、github、sourceTree等工具的使用<br/>
+                                        熟悉jsp、javascript、jquery、xml等技术<br/>
+                                        熟悉hibernate、spring、springmvc、Lucene、cxf等开源框架<br/>
+                                        熟悉MySQL、Mongodb的使用，以及MySQL的性能优化环节<br/>
+                                        熟悉Linux系统常用命令及shell简单编程<br/>
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="text" style=" height: 40%;">
+                                <div class="text skilled1" style=" height: 40%;">
                                     <div class="text-left">
-                                        <span class="star active"> </span>
+                                        <span class="star active"></span>
+                                        <p>根据英文文档学习的相关编程技能：</p>
                                     </div>
-                                    <div class="text-right" >
 
+                                    <div class="text-right skilled skilled2" >
+                                        <p>
+                                        了解PHP的Laravel框架项目的开发<br/>
+                                        了解meteor全栈开发的流程<br/>
+                                        了解Mongodb+Express+Angularjs+Node.js开发的过程<br/>
+                                        </p>
                                     </div>
 
                                 </div>
 
                             </div>
+                            <!--项目经验-->
+                            <div class="content">
+                                <div class="text" style="height: 18%">
+                                    <div class="text-left project-title">
+                                        <span class="star active"> </span>
+                                        <p>校园社团管理系统（个人）</p>
+                                    </div>
+                                    <div class="text-right project">
+                                        <p><pj class="pj">项目描述：</pj>后台使用的是Hibernate+Spring +SpringMVC系统框架，前端采用的是JSP技术,主要功能是实现对大</p>
+                                        <p>学校园里众多社团组织日常事务（招募、组织活动、经费等）管理进行系统化、智能化操作。</p>
 
-                            <div class="content">
-                                <div class="text">
-                                    <div class="text-left">
+                                    </div>
+                                    <div class="clear"> </div>
+                                </div>
+                                <div class="text" style="height: 18%">
+                                    <div class="text-left project-title">
                                         <span class="star active"> </span>
+                                        <p>新闻信息检索系统（个人）</p>
                                     </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">My First Name</a></h4><label>2:30 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Malorum Borney</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text ">
-                                    <div class="text-left">
-                                        <span class="star"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Flux Capacitor!</a></h4><label>2:30 PM </label>
-                                        <p>It requires 2 gigaWatts of electricity... </p>
-                                        <p class="from">From</p>
-                                        <h6>Dr. Emmett Brown</h6>
+                                    <div class="text-right project">
+                                        <p><pj class="pj">项目描述：</pj>主要是利用lucene开源工具结合J2EE系统架构实现对一个新闻网站的站内信息进行分词、建立索引、</P>
+                                        <P>优化搜索，达到一个高效的全文检索功能。</p>
+
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
-                                <div class="text">
-                                    <div class="text-left">
+
+                                <div class="text" style="height: 30%">
+                                    <div class="text-left project-title">
+                                        <span class="star active" > </span>
+                                        <p>课程教学管理平台（团队）</p>
+                                    </div>
+                                    <div class="text-right project">
+
+                                            <p><pj class="pj">项目描述：</pj>教师和学生分别以不同的角色（布置和批阅作业/问题、上传和下载作业/文档、抢答问题等）使用的</p>
+                                            <p>课程在线教学平台。<a href="http://115.159.104.74:8080/ds/front/index">（http://115.159.104.74:8080/ds/front/index）</a></p>
+                                            <p><pj class="pj">软件环境：</pj>github、IDEA 、maven、JPA、spring、springMVC、bootstrap等</p>
+                                            <p><pj class="pj">负责部分：</pj>个人主要负责前期需求分析，老师布置和批阅作业、学生下载和下载作业等模块的开发。</p>
+                                    </div>
+                                    <div class="clear"> </div>
+                                </div>
+                                <div class="text" style="height: 34%">
+                                    <div class="text-left project-title">
                                         <span class="star active"> </span>
+                                        <p>长江经济带专题数据库平台（团队） </p>
                                     </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Dolorem ipsum </a></h4><label>2:30 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Ricky Anthony</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Sweet last name!</a></h4><label>2:00 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Patrick Star</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Dolorem ipsum</a></h4><label>1:15 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Patrick Star</h6>
+                                    <div class="text-right project">
+                                        <p><pj class="pj">项目描述：</pj>建立一个长江经济带专题数据库信息平台，展现九省二市地区的经济、政治、文化、社会、环境等方</p>
+                                        <p>面的发展情况。<a href="http://www.yangtze.org.cn/">（http://www.yangtze.org.cn/）</a></p>
+                                        <p><pj class="pj">软件环境：</pj>PHP、Laravel 、github、SourceTree、Bootstrap、Sublime Text3</p>
+                                        <p><pj class="pj">负责部分：</pj>主要负责用户中心模块，及用户权限管理模块、文件上传和下载，同时负责旧数据库的移植和加工。<br/></p>
+
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
                             </div>
+                            <!--实习经验-->
                             <div class="content">
-                                <div class="text ">
+                                <div class="text " style="height: 20%"></div>
+                                <div class="text" style="height: 60%">
                                     <div class="text-left">
-                                        <span class="star"> </span>
+                                        <span class="star active" > </span>
+
                                     </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">My First Name</a></h4> <label>11:50 AM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Malorum Borney</h6>
+                                    <div class="text-right project">
+                                        <p class="experience">2015.04-2015.07  &nbsp;&nbsp;上海坦思计算机系统有限公司    &nbsp;&nbsp;       java开发工程师</p>
+                                        <p><pj class="pj">工作内容描述：</pj>1. 接口测试、测试后台接口传递的数据内容、格式是否正确。</p>
+                                        <p style="margin-left: 94px;">2. 主要是在JSP页面中解析并显示后台传递的数据。</p>
+                                        <p style="margin-left: 94px;">3. 利用JSON数据格式，编写前端和后台之间交互的部分接口。</p>
+
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Hi Friend...  </a></h4><label>10:05 AM </label>
-                                        <p>It requires 2 gigaWatts of electricity... </p>
-                                        <p class="from">From</p>
-                                        <h6>Dr. Emmett Brown</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Flux Capacitor!</a></h4><label>9:30 AM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Ricky Anthony</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">My First Name </a></h4><label>8:45 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Patrick Star</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Sweet last name!</a></h4><label>11:50 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Patrick Star</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
+                                <div class="text" style="height: 20%"></div>
                             </div>
+                            <!--个人评价-->
                             <div class="content">
-                                <div class="text ">
+                                <div class="text " style="height: 20%"></div>
+                                <div class="text" style="height: 60%">
                                     <div class="text-left">
-                                        <span class="star active"> </span>
+                                        <span class="star active" > </span>
+
                                     </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Sweet last name!</a></h4><label>11:50 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Malorum Borney</h6>
+                                    <div class="text-right skilled">
+                                        <p>
+                                            本人本科和硕士阶段读的都是计算机专业，具有扎实的专业基础。<br/>
+                                            性格比较开朗，喜欢交流，喜欢和同伴一起讨论问题。<br/>
+                                            具有团队合作精神，对待学习和工作态度认真。<br/>
+                                            善于学习新的技术和事务，空闲时间喜欢浏览一些IT科技方面的新闻，和技术博客。<br/>
+                                            有良好的自学能力和独立解决问题的能力。<br/>
+
+                                        </p>
+
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
-                                <div class="text">
+                                <div class="text" style="height: 20%"></div>
+                            </div>
+                            <!--荣誉奖励-->
+                            <div class="content">
+                                <div class="text " style="height: 20%"></div>
+                                <div class="text" style="height: 60%">
                                     <div class="text-left">
-                                        <span class="star"> </span>
+                                        <span class="star active" > </span>
                                     </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">My First Name</a></h4><label>10:55 PM </label>
-                                        <p>It requires 2 gigaWatts of electricity... </p>
-                                        <p class="from">From</p>
-                                        <h6>Dr. Emmett Brown</h6>
+                                    <div class="text-right skilled">
+
+                                        <%--<div class="honor-time"></div>--%>
+                                        <%--<div class="honor-time" ></div>--%>
+                                        <%--<div class="honor-time" ></div>--%>
+                                        <%--<div class="honor-time" ></div>--%>
+                                        <%--<div style="    width: 100%;border-top: #6f6c6c 2px solid;"></div>--%>
+
+
+
+                                        <p>
+                                            2015.11 &nbsp;&nbsp;国家学业奖学金三等奖<br/>
+                                            2015.04 &nbsp;&nbsp;获得“品学兼优”本科毕业生荣誉称号<br/>
+                                            2014.11 &nbsp;&nbsp;校级三等奖学金<br/>
+                                            2012.05 &nbsp;&nbsp;校级优秀班干部<br/>
+
+                                        </p>
+
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
-                                <div class="text ">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Flux Capacitor!</a></h4><label>10:15 PM </label>
-                                        <p>Lorem Ipsum is dummy text Of industry. </p>
-                                        <p class="from">From</p>
-                                        <h6> Ricky Anthony</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
-                                <div class="text">
-                                    <div class="text-left">
-                                        <span class="star active"> </span>
-                                    </div>
-                                    <div class="text-right">
-                                        <h4><a href="#">Hi Friend... </a></h4><label>9:23 PM </label>
-                                        <p>It requires 2 gigaWatts of electricity... </p>
-                                        <p class="from">From</p>
-                                        <h6>Dr. Emmett Brown</h6>
-                                    </div>
-                                    <div class="clear"> </div>
-                                </div>
+                                <div class="text" style="height: 20%"></div>
                             </div>
                         </div>
                         <div class="options">
@@ -324,17 +286,6 @@
                 $('.tabs nav a:nth-of-type(' + (index + 1) + ')').addClass('selected');
             }
         });
-    </script>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-//        (function() {
-//            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//        })();
     </script>
 </body>
 </html>

@@ -17,4 +17,5 @@ public interface IManagerService {
     public List<Articles> getByNoteId(int id);
     public List<Menu> getMenu();
     public boolean saveArticle(int note_id,String title,String abs_text,String content);
+    public boolean loginUser(String username,String password);
 }

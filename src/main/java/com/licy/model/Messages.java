@@ -17,6 +17,8 @@ public class Messages {
     private String author;
     private String content;
     private Timestamp create_time;
+    private int pid;
+    private int type;
 
     public Messages(int id, String title, String content) {
         this.id = id;
@@ -30,8 +32,15 @@ public class Messages {
         this.content = content;
         this.create_time = create_time;
     }
-    public Messages(){
+    public Messages(String author,String title, String content,Timestamp create_time,int type) {
+        this.author = author;
+        this.title = title;
+        this.content = content;
+        this.create_time = create_time;
+        this.type = type;
+    }
 
+    public Messages(){
     }
     @Id
     @GeneratedValue
@@ -71,5 +80,21 @@ public class Messages {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public int getPid() {
+        return pid;
+    }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }

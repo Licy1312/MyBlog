@@ -26,4 +26,5 @@ public interface IArticlesService {
     public List<Articles> gethits();
     //获得最新的1条
     public Articles getRecentNew();
+    public int updateHits(int id);
 }

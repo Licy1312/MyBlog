@@ -21,9 +21,9 @@ public class MessagesController {
 
     @ResponseBody
     @RequestMapping("/saveMessage")
-    public String saveMessage(String user,String title,String content){
+    public String saveMessage(String user,String title,int type,String content){
         Date now = new Date();
-        Messages message = new Messages(user,title,content,new java.sql.Timestamp(now.getTime()));
+        Messages message = new Messages(user,title,content,new java.sql.Timestamp(now.getTime()),type);
         messagesService.add(message);
         return "success";
     }

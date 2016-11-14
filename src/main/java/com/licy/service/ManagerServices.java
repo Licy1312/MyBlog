@@ -1,10 +1,12 @@
 package com.licy.service;
 
+import com.licy.dao.IAccountsDao;
 import com.licy.dao.IArticlesDao;
 import com.licy.dao.INotesDao;
 import com.licy.model.Articles;
 import com.licy.model.Notes;
 import com.licy.tool.Menu;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -20,6 +22,8 @@ import java.util.List;
 public class ManagerServices implements IManagerService {
     private INotesDao notesDao;
     private IArticlesDao articlesDao;
+    @Autowired
+    private IAccountsDao accountsDao;
 
     @Inject
     public void setMessagesDao(INotesDao notesDao) {
@@ -78,6 +82,14 @@ public class ManagerServices implements IManagerService {
         if(notesDao.update(note_id)>0)
             return true;
         return false;
+    }
+    /*验证用户的身份*/
+    @Override
+    public boolean loginUser(String username, String password) {
+        if(accountsDao.loginUser(username,password)==null){
+            return false;
+        }
+        return true;
     }
 
 }

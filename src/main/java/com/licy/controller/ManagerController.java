@@ -27,20 +27,28 @@ import java.util.UUID;
  * Created by Lingling on 2016/10/29.
  */
 @Controller
-@RequestMapping("/manager")
+@RequestMapping("/admin")
 public class ManagerController {
     @Autowired
     private IManagerService managerService;
     @Value("${filePath}")
     private String uploadPath;
     @RequestMapping("/login")
-    public String test(){
-        return "manager/login";
+    public String login(){
+        return "admin/login";
+    }
+    @ResponseBody
+    @RequestMapping("/iden")
+    public String identity(String username,String password){
+        if(managerService.loginUser(username,password)){
+            return "success";
+        }
+        return "error";
     }
     @RequestMapping("/home")
     public String home(Model model){
         model.addAttribute("notes",managerService.getAll());
-        return "manager/home";
+        return "admin/home";
     }
     @ResponseBody
     @RequestMapping("/menus")
@@ -50,12 +58,12 @@ public class ManagerController {
     @RequestMapping("/saveMenu")
     public String saveMenu(String noteName){
         managerService.save(noteName);
-        return "redirect:/manager/home";
+        return "redirect:/admin/home";
     }
     @RequestMapping("/menu/{id}")
     public String getNote(@PathVariable("id") int id ,Model model){
         model.addAttribute("tempNotes",managerService.getByNoteId(id));
-        return "manager/notes";
+        return "admin/notes";
     }
     @ResponseBody
     @RequestMapping("/saveNote")
@@ -71,7 +79,6 @@ public class ManagerController {
             file.transferTo(new File(uploadPath+fileName));
             // 图片存放的真实路径
             String realPath = request.getServletContext().getRealPath("/upload") + "/" + fileName;
-
             // 返回图片的URL地址
             String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/upload/";
             response.getWriter().write(basePath + fileName);
@@ -81,7 +88,7 @@ public class ManagerController {
     }
     @RequestMapping("/editNote")
     public String editNote(){
-        return "manager/editNote";
+        return "admin/editNote";
     }
     @RequestMapping("/me")
     public String about(){

@@ -373,6 +373,9 @@ audio {
     background-color: #fff;
     position: relative;
     height:95%;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
 }
 .account-info {
     border-right: 1px solid #E2E2E2;
@@ -587,12 +590,63 @@ select.dropdown:focus {
     margin: 3px 1px 10px 0px;
     width: 80px;
 }
-.skilled pre{
+.skilled1{
+    height: 60%;
+}
+.skilled1 span{
+    float: left;
+}
+.skilled1 p{
+    color: #428bca;
+    float: left
+}
+.skilled2 {
+    height: 99%;
+}
+.skilled p{
     margin-top: 5%;
     margin-left: 10%;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+    line-height: 30px;
+}
+.project{
+    margin-left: 19px;
+    font-size: 16px;
+}
+.project p{
+    float: left;
+    color: black;
+}
+.project-title span{
+    float: left;
+}
+.project-title p{
     float: left;
     font-size: 16px;
     color: black;
+    font-weight: bold;
+}
+.pj {
+   color: #0a80e6;
+}
+.project a:hover{
+    color:#da1919
+}
+.experience{
+    font-size: 18px!important;
+    margin-top: 10px;
+}
+.honor-time{
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: -4px;
+    left: 6px;
+    background: #000;
+    border: 2px solid #333;
+    float: right;margin-right: 135px;
 }
 /*--//copyright--*/
 /*---- responsive-design -----*/
@@ -831,4 +885,27 @@ select.dropdown:focus {
     .copyright p {
         font-size: 0.8em;
     }
+}
+.message-topic{
+    width: 90% !important;
+    float: left;
+}
+.message-type{
+    font-family: 'open_sansregular';
+    margin: 20px 0;
+    box-shadow: none;
+    border: 1px solid #303030;
+    background: #454545;
+    color: #9C9C9C;
+    line-height: 1.8em;
+    display: block;
+    width: 10%;
+    padding: 6px 12px;
+    font-size: 14px;
+    outline: none;
+    float: left;
+    height: 39px;
+}
+.message-content{
+    margin-bottom: 10px !important;
 }

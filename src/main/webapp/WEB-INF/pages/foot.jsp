@@ -19,10 +19,11 @@
   $(function(){
     $("#save").click(function(){
       var title = $("#Mtitle").val().trim();
+      var type = $("#form-field-select-1").val().trim();
       var content = $("#Mcontent").val().trim();
       if(title!=""&& content!=""){
         var url ="${pageContext.request.contextPath}/saveMessage";
-        var args = {"user":ipname,"title":title,"content":content};
+        var args = {"user":ipname,"title":title,"type":type,"content":content};
         $.post(url,args,function(data){
           if(data=="success"){
             alert("留言成功！")
@@ -45,9 +46,12 @@
       <div class="col-md-8 contact_left">
         <h3>给我留言</h3>
         <form id="messageForm">
-          <input id ="Mtitle" type="text" name="title">
-          <textarea id ="Mcontent" name="content"></textarea>
-
+          <input id ="Mtitle" type="text" name="title" class="message-topic" placeholder="主题">
+          <select class="form-control message-type"name="noteId" id="form-field-select-1">
+            <option value=0>公开</option>
+            <option value=1>私密</option>
+          </select>
+          <textarea id ="Mcontent" name="content" placeholder="内容" class="message-content"></textarea>
           <span class="pull-right">
             <input id="save" type="button" value="确定" class="foot-button">
           </span>

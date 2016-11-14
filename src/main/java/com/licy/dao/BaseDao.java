@@ -23,7 +23,6 @@ public class BaseDao<T> implements IBaseDao<T> {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
 	protected Session getSession() {
 		return sessionFactory.getCurrentSession();
 	}

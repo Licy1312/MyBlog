@@ -13,4 +13,5 @@ public interface IArticlesDao extends IBaseDao<Articles> {
     public List<Articles> getProArticle();
     public List<Articles> getRecentFive();
     public List<Articles> getHitsTen();
+    public int updateHits(int id);
 }

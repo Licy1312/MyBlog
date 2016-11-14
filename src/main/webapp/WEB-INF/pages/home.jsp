@@ -30,7 +30,7 @@
   <div class="container">
       <!--我的名片-->
       <div class="info" >
-        <figure > <img src="${pageContext.request.contextPath}/resources/images/home.jpg" style="-moz-border-radius: 15px;
+        <figure > <img src="${pageContext.request.contextPath}/resources/images/home.jpg" style="width: 100%;height:100%;-moz-border-radius: 15px;
             -webkit-border-radius: 15px;
             border-radius: 10px;" alt="欢迎您访问！">
         </figure>
@@ -42,7 +42,7 @@
           <p>Email：licy1312@163.com</p>
           <ul class="intro">
             <li><a href="#contact" class="talk" title="给我留言"></a></li>
-            <li><a href="${pageContext.request.contextPath}/" class="addresses" title="个人中心"></a></li>
+            <li><a href="${pageContext.request.contextPath}/me" class="addresses" title="个人中心"></a></li>
             <li><a href="${pageContext.request.contextPath}/" class="email" title="留言板"></a></li>
             <li><a href="${pageContext.request.contextPath}/" class="heart" title="关注我"></a></li>
           </ul>
@@ -69,7 +69,7 @@
           </div>
           <!--文章目录-->
           <div class="toppic">
-              <h2>文章目录</h2> <a href="${pageContext.request.contextPath}/detail" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
+              <h2>笔记目录</h2> <a href="${pageContext.request.contextPath}/detail" style="float: right;margin-top: -28px;text-decoration: none;">更多</a>
             <ul id="menu">
             </ul>
           </div>

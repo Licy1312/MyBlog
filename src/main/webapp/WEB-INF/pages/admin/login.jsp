@@ -14,7 +14,7 @@
 </head>
 <body class="login-layout">
 <div class="main-container">
-    <div class="main-content">
+    <div class="main-content" style="width: 100%;">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1" style="margin-top: 8%;">
                 <div class="login-container">
@@ -29,18 +29,18 @@
 
                                     <div class="space-6"></div>
 
-                                    <form>
+                                    <form action="${pageContext.request.contextPath}/admin/iden">
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input id ="username" type="text" class="form-control" placeholder="账号" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
                                             </label>
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" id="password" class="form-control" placeholder="密码" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
                                             </label>
@@ -50,12 +50,12 @@
                                             <div class="clearfix">
                                                 <label class="inline">
                                                     <input type="checkbox" class="ace" />
-                                                    <span class="lbl"> Remember Me</span>
+                                                    <span class="lbl"> 记住密码</span>
                                                 </label>
 
-                                                <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                                                <button id="login" type="button" class="width-35 pull-right btn btn-sm btn-primary">
                                                     <i class="ace-icon fa fa-key"></i>
-                                                    <span class="bigger-110">Login</span>
+                                                    <span class="bigger-110">登录</span>
                                                 </button>
                                             </div>
 
@@ -81,7 +81,25 @@
     $('body').attr('class', 'login-layout blur-login');
     $('#id-text2').attr('class', 'white');
     $('#id-company-text').attr('class', 'light-blue');
+    $("body").keydown(function() {
+        if (event.keyCode == "13") {
+            $("#login").click();
+        }
+    });
+    $("#login").click(function(){
+        var url = "${pageContext.request.contextPath}/admin/iden";
+        var username = $("#username").val().trim();
+        var password = $("#password").val().trim();
+        var args = {"username":username,"password":password};
+        $.post(url,args,function(data){
+            if(data="success"){
+                window.location.href="${pageContext.request.contextPath}/admin/home";
+            }
+            if(data=="error"){
+                alert("用户名或者密码错误！");
+            }
+        });
+    });
 </script>
-
 </body>
 </html>
