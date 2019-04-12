@@ -74,17 +74,11 @@ CREATE TABLE `messages` (
 INSERT INTO `messages` VALUES ('1', null, 'Your Messages here....', null, 'Subject');
 INSERT INTO `messages` VALUES ('2', null, 'Your Messages here....', null, 'Subject');
 INSERT INTO `messages` VALUES ('3', null, 'Your Messages here....', null, 'Subject');
-INSERT INTO `messages` VALUES ('4', null, '李昌亚', null, '李昌亚');
-INSERT INTO `messages` VALUES ('5', null, '李昌亚', null, '李昌亚');
-INSERT INTO `messages` VALUES ('6', null, '李昌亚', null, '李昌亚');
-INSERT INTO `messages` VALUES ('7', null, '李昌亚', null, '上海大学');
-INSERT INTO `messages` VALUES ('8', null, '李昌', null, '上啊哈');
 INSERT INTO `messages` VALUES ('9', null, '额瑞特人', null, '上海大学');
 INSERT INTO `messages` VALUES ('10', null, '事', null, 'Yui');
 INSERT INTO `messages` VALUES ('11', null, null, null, null);
 INSERT INTO `messages` VALUES ('12', null, '二突然会跳舞花', null, '丽丽擦地瓜的结果');
 INSERT INTO `messages` VALUES ('13', null, '而又让我也很温柔', null, '而且让土耳其问题');
-INSERT INTO `messages` VALUES ('14', null, '我是李昌亚！', null, '你好！');
 INSERT INTO `messages` VALUES ('15', null, '你好！！！！！！', null, '你好');
 INSERT INTO `messages` VALUES ('16', null, 'fdgergergrb', null, '3513534');
 INSERT INTO `messages` VALUES ('17', '183.192.32.36', '热个人过热如果', null, '3213413461');
