@@ -39,10 +39,10 @@
                 <div class="account-info">
                     <div class="account-top">
                         <div class="account-top-left">
-                            <img src="${pageContext.request.contextPath}/resources/images/me2.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/resources/images/author.jpg" alt="">
                         </div>
                         <div class="account-top-right">
-                            <h2>李昌亚</h2>
+                            <h2>姓名</h2>
                             <p>求职意向：软件开发工程师</p>
                         </div>
                         <div class="clear"> </div>
@@ -66,7 +66,7 @@
                                     <div class="text-right info-me1" style=" height: 99%;">
 
                                         <p id ="year">2017届应届硕士毕业生<br/>
-                                           上海大学 计算机工程与科学学院 软件工程 </p>
+                                           XXX学校 XXXX学院 XXXX专业 </p>
                                     </div>
                                 </div>
                                 <div class="text" style=" height: 60%;">
@@ -77,13 +77,13 @@
                                         <table >
                                             <tbody>
                                                <tr>
-                                                   <td style="color: #428bca;">性别:</td><td>男</td><td></td><td  style="color: #428bca;">籍贯:</td><td>河南信阳</td>
+                                                   <td style="color: #428bca;">性别:</td><td>男</td><td></td><td  style="color: #428bca;">籍贯:</td><td>XXXXX</td>
                                                </tr>
                                                <tr>
-                                                   <td  style="color: #428bca;">出生年月:</td><td>1991.11</td><td></td><td  style="color: #428bca;">学历:</td><td>硕士研究生</td>
+                                                   <td  style="color: #428bca;">出生年月:</td><td>1991.11</td><td></td><td  style="color: #428bca;">学历:</td><td>XXXXX</td>
                                                </tr>
                                                <tr>
-                                                   <td  style="color: #428bca;">电话:</td><td>15201895065</td><td></td><td  style="color: #428bca;">邮箱:</td><td>licy1312@163.com</td>
+                                                   <td  style="color: #428bca;">电话:</td><td>XXXXXXXXX</td><td></td><td  style="color: #428bca;">邮箱:</td><td>XXXXXXXXX@163.com</td>
                                                </tr>
                                             </tbody>
                                         </table>
@@ -133,25 +133,29 @@
                             <div class="content">
                                 <div class="text" style="height: 18%">
                                     <div class="text-left project-title">
-                                        <span class="star active"> </span>
-                                        <p>校园社团管理系统（个人）</p>
+                                        <span class="star active" > </span>
+                                        <p>XXXXXXXXX项目</p>
                                     </div>
                                     <div class="text-right project">
-                                        <p><pj class="pj">项目描述：</pj>后台使用的是Hibernate+Spring +SpringMVC系统框架，前端采用的是JSP技术,主要功能是实现对大</p>
-                                        <p>学校园里众多社团组织日常事务（招募、组织活动、经费等）管理进行系统化、智能化操作。</p>
 
+                                            <p><pj class="pj">项目描述：</pj>XXXXXXXXXX</p>
+                                            <p>课程在线教学平台。<a href="">www.baidu.com</a></p>
+                                            <p><pj class="pj">软件环境：</pj>XXXXXXXXXX</p>
+                                            <p><pj class="pj">负责部分：</pj>XXXXXXXXXX</p>
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
                                 <div class="text" style="height: 18%">
                                     <div class="text-left project-title">
-                                        <span class="star active"> </span>
-                                        <p>新闻信息检索系统（个人）</p>
+                                        <span class="star active" > </span>
+                                        <p>XXXXXXXXX项目</p>
                                     </div>
                                     <div class="text-right project">
-                                        <p><pj class="pj">项目描述：</pj>主要是利用lucene开源工具结合J2EE系统架构实现对一个新闻网站的站内信息进行分词、建立索引、</P>
-                                        <P>优化搜索，达到一个高效的全文检索功能。</p>
 
+                                            <p><pj class="pj">项目描述：</pj>XXXXXXXXXX</p>
+                                            <p>课程在线教学平台。<a href="">www.baidu.com</a></p>
+                                            <p><pj class="pj">软件环境：</pj>XXXXXXXXXX</p>
+                                            <p><pj class="pj">负责部分：</pj>XXXXXXXXXX</p>
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
@@ -159,28 +163,28 @@
                                 <div class="text" style="height: 30%">
                                     <div class="text-left project-title">
                                         <span class="star active" > </span>
-                                        <p>课程教学管理平台（团队）</p>
+                                        <p>XXXXXXXXX项目</p>
                                     </div>
                                     <div class="text-right project">
 
-                                            <p><pj class="pj">项目描述：</pj>教师和学生分别以不同的角色（布置和批阅作业/问题、上传和下载作业/文档、抢答问题等）使用的</p>
-                                            <p>课程在线教学平台。<a href="http://115.159.104.74:8080/ds/front/index">（http://115.159.104.74:8080/ds/front/index）</a></p>
-                                            <p><pj class="pj">软件环境：</pj>github、IDEA 、maven、JPA、spring、springMVC、bootstrap等</p>
-                                            <p><pj class="pj">负责部分：</pj>个人主要负责前期需求分析，老师布置和批阅作业、学生下载和下载作业等模块的开发。</p>
+                                            <p><pj class="pj">项目描述：</pj>XXXXXXXXXX</p>
+                                            <p>课程在线教学平台。<a href="">www.baidu.com</a></p>
+                                            <p><pj class="pj">软件环境：</pj>XXXXXXXXXX</p>
+                                            <p><pj class="pj">负责部分：</pj>XXXXXXXXXX</p>
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
                                 <div class="text" style="height: 34%">
                                     <div class="text-left project-title">
-                                        <span class="star active"> </span>
-                                        <p>长江经济带专题数据库平台（团队） </p>
+                                        <span class="star active" > </span>
+                                        <p>XXXXXXXXX项目</p>
                                     </div>
                                     <div class="text-right project">
-                                        <p><pj class="pj">项目描述：</pj>建立一个长江经济带专题数据库信息平台，展现九省二市地区的经济、政治、文化、社会、环境等方</p>
-                                        <p>面的发展情况。<a href="http://www.yangtze.org.cn/">（http://www.yangtze.org.cn/）</a></p>
-                                        <p><pj class="pj">软件环境：</pj>PHP、Laravel 、github、SourceTree、Bootstrap、Sublime Text3</p>
-                                        <p><pj class="pj">负责部分：</pj>主要负责用户中心模块，及用户权限管理模块、文件上传和下载，同时负责旧数据库的移植和加工。<br/></p>
 
+                                            <p><pj class="pj">项目描述：</pj>XXXXXXXXXX</p>
+                                            <p>课程在线教学平台。<a href="">www.baidu.com</a></p>
+                                            <p><pj class="pj">软件环境：</pj>XXXXXXXXXX</p>
+                                            <p><pj class="pj">负责部分：</pj>XXXXXXXXXX</p>
                                     </div>
                                     <div class="clear"> </div>
                                 </div>
@@ -194,10 +198,10 @@
 
                                     </div>
                                     <div class="text-right project">
-                                        <p class="experience">2015.04-2015.07  &nbsp;&nbsp;上海坦思计算机系统有限公司    &nbsp;&nbsp;       java开发工程师</p>
-                                        <p><pj class="pj">工作内容描述：</pj>1. 接口测试、测试后台接口传递的数据内容、格式是否正确。</p>
-                                        <p style="margin-left: 94px;">2. 主要是在JSP页面中解析并显示后台传递的数据。</p>
-                                        <p style="margin-left: 94px;">3. 利用JSON数据格式，编写前端和后台之间交互的部分接口。</p>
+                                        <p class="experience">2015.04-2015.07  &nbsp;&nbsp;上海XXXXXX系统有限公司    &nbsp;&nbsp;       java开发工程师</p>
+                                        <p><pj class="pj">工作内容描述：</pj>1. XXXXXXXXXX</p>
+                                        <p style="margin-left: 94px;">2. XXXXXXXXXX</p>
+                                        <p style="margin-left: 94px;">3. XXXXXXXXXX</p>
 
                                     </div>
                                     <div class="clear"> </div>
@@ -236,19 +240,11 @@
                                     </div>
                                     <div class="text-right skilled">
 
-                                        <%--<div class="honor-time"></div>--%>
-                                        <%--<div class="honor-time" ></div>--%>
-                                        <%--<div class="honor-time" ></div>--%>
-                                        <%--<div class="honor-time" ></div>--%>
-                                        <%--<div style="    width: 100%;border-top: #6f6c6c 2px solid;"></div>--%>
-
+                                   
 
 
                                         <p>
-                                            2015.11 &nbsp;&nbsp;国家学业奖学金三等奖<br/>
-                                            2015.04 &nbsp;&nbsp;获得“品学兼优”本科毕业生荣誉称号<br/>
-                                            2014.11 &nbsp;&nbsp;校级三等奖学金<br/>
-                                            2012.05 &nbsp;&nbsp;校级优秀班干部<br/>
+                                            各种奖励
 
                                         </p>
 
